@@ -1,0 +1,27 @@
+---
+# run the playbook: 'ansible-playbook Bash_aliases.yml -vvv'  
+# run the playbook at the same level than ansible.cfg
+- hosts: all
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: Install libpam-pwquality package
+      apt:
+        name: libpam-pwquality
+        state: present
+      become: yes
+    - name: Install libpam-shield package
+      apt:
+        name: libpam-shield
+        state: present
+      become: yes
+    - name: Install libpam-cracklib package
+      apt:
+        name: libpam-cracklib
+        state: present
+      become: yes
+    - name: Install libpam-tmpdir package
+      apt:
+        name: libpam-tmpdir
+        state: present
+      become: yes
