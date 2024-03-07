@@ -1,0 +1,858 @@
+2024-03-07 00:27:22,736 p=177811 u=vissol n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does
+not match 'all'
+
+2024-03-07 00:29:32,578 p=178446 u=vissol n=ansible | node1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host localhost port 2200: Connection refused",
+    "unreachable": true
+}
+2024-03-07 00:29:37,628 p=178446 u=vissol n=ansible | node2 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname node2.local: Name or service not known",
+    "unreachable": true
+}
+2024-03-07 00:29:37,628 p=178446 u=vissol n=ansible | node3 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname node3.local: Name or service not known",
+    "unreachable": true
+}
+2024-03-07 00:30:19,210 p=178696 u=vissol n=ansible | node1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host localhost port 2200: Connection refused",
+    "unreachable": true
+}
+2024-03-07 00:32:01,932 p=179333 u=vissol n=ansible | node1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2024-03-07 00:48:38,049 p=184401 u=vissol n=ansible | ansible-playbook [core 2.15.6]
+  config file = /home/vissol/softs/dev-projects/debian-hard-ansible/ansible.cfg
+  configured module search path = ['/home/vissol/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vissol/.local/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/vissol/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.2 (default, Feb 28 2021, 17:03:44) [GCC 10.2.1 20210110] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+2024-03-07 00:48:38,049 p=184401 u=vissol n=ansible | Using /home/vissol/softs/dev-projects/debian-hard-ansible/ansible.cfg as config file
+2024-03-07 00:48:38,197 p=184401 u=vissol n=ansible | host_list declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/node1 as it did not pass its verify_file() method
+2024-03-07 00:48:38,198 p=184401 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 00:48:38,198 p=184401 u=vissol n=ansible | script declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/node1 as it did not pass its verify_file() method
+2024-03-07 00:48:38,198 p=184401 u=vissol n=ansible | auto declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/node1 as it did not pass its verify_file() method
+2024-03-07 00:48:38,198 p=184401 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 00:48:38,198 p=184401 u=vissol n=ansible | yaml declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/node1 as it did not pass its verify_file() method
+2024-03-07 00:48:38,198 p=184401 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 00:48:38,198 p=184401 u=vissol n=ansible | ini declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/node1 as it did not pass its verify_file() method
+2024-03-07 00:48:38,198 p=184401 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 00:48:38,198 p=184401 u=vissol n=ansible | toml declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/node1 as it did not pass its verify_file() method
+2024-03-07 00:48:38,199 p=184401 u=vissol n=ansible | [WARNING]: Unable to parse /home/vissol/softs/dev-projects/debian-hard-ansible/node1 as an inventory source
+
+2024-03-07 00:48:38,199 p=184401 u=vissol n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-03-07 00:48:38,203 p=184401 u=vissol n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does
+not match 'all'
+
+2024-03-07 00:48:38,365 p=184401 u=vissol n=ansible | redirecting (type: callback) ansible.builtin.debug to ansible.posix.debug
+2024-03-07 00:48:38,366 p=184401 u=vissol n=ansible | redirecting (type: callback) ansible.builtin.debug to ansible.posix.debug
+2024-03-07 00:48:38,381 p=184401 u=vissol n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-03-07 00:48:38,382 p=184401 u=vissol n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-03-07 00:48:38,382 p=184401 u=vissol n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-03-07 00:48:38,382 p=184401 u=vissol n=ansible | PLAYBOOK: Bash_aliases.yml ***********************************************************************************
+2024-03-07 00:48:38,382 p=184401 u=vissol n=ansible | 1 plays in Bash_aliases.yml
+2024-03-07 00:48:38,383 p=184401 u=vissol n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: my_hosts
+
+2024-03-07 00:48:38,384 p=184401 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 00:48:38,385 p=184401 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 00:48:38,385 p=184401 u=vissol n=ansible | PLAY [my_hosts] **********************************************************************************************
+2024-03-07 00:48:38,385 p=184401 u=vissol n=ansible | skipping: no hosts matched
+2024-03-07 00:48:38,386 p=184401 u=vissol n=ansible | PLAY RECAP ***************************************************************************************************
+2024-03-07 00:53:18,500 p=185890 u=vissol n=ansible | ansible-playbook [core 2.15.6]
+  config file = /home/vissol/softs/dev-projects/debian-hard-ansible/ansible.cfg
+  configured module search path = ['/home/vissol/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vissol/.local/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/vissol/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.2 (default, Feb 28 2021, 17:03:44) [GCC 10.2.1 20210110] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+2024-03-07 00:53:18,500 p=185890 u=vissol n=ansible | Using /home/vissol/softs/dev-projects/debian-hard-ansible/ansible.cfg as config file
+2024-03-07 00:53:18,647 p=185890 u=vissol n=ansible | host_list declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/node1 as it did not pass its verify_file() method
+2024-03-07 00:53:18,648 p=185890 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 00:53:18,648 p=185890 u=vissol n=ansible | script declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/node1 as it did not pass its verify_file() method
+2024-03-07 00:53:18,648 p=185890 u=vissol n=ansible | auto declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/node1 as it did not pass its verify_file() method
+2024-03-07 00:53:18,648 p=185890 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 00:53:18,648 p=185890 u=vissol n=ansible | yaml declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/node1 as it did not pass its verify_file() method
+2024-03-07 00:53:18,648 p=185890 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 00:53:18,648 p=185890 u=vissol n=ansible | ini declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/node1 as it did not pass its verify_file() method
+2024-03-07 00:53:18,648 p=185890 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 00:53:18,648 p=185890 u=vissol n=ansible | toml declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/node1 as it did not pass its verify_file() method
+2024-03-07 00:53:18,649 p=185890 u=vissol n=ansible | [WARNING]: Unable to parse /home/vissol/softs/dev-projects/debian-hard-ansible/node1 as an inventory source
+
+2024-03-07 00:53:18,649 p=185890 u=vissol n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-03-07 00:53:18,654 p=185890 u=vissol n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2024-03-07 00:53:18,811 p=185890 u=vissol n=ansible | redirecting (type: callback) ansible.builtin.debug to ansible.posix.debug
+2024-03-07 00:53:18,812 p=185890 u=vissol n=ansible | redirecting (type: callback) ansible.builtin.debug to ansible.posix.debug
+2024-03-07 00:53:18,826 p=185890 u=vissol n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-03-07 00:53:18,826 p=185890 u=vissol n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-03-07 00:53:18,827 p=185890 u=vissol n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-03-07 00:53:18,827 p=185890 u=vissol n=ansible | PLAYBOOK: Bash_aliases.yml ***************************************************************************************************************************************************************************************************************************************************
+2024-03-07 00:53:18,827 p=185890 u=vissol n=ansible | 1 plays in Bash_aliases.yml
+2024-03-07 00:53:18,828 p=185890 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 00:53:18,829 p=185890 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 00:53:18,829 p=185890 u=vissol n=ansible | PLAY [all] *******************************************************************************************************************************************************************************************************************************************************************
+2024-03-07 00:53:18,829 p=185890 u=vissol n=ansible | skipping: no hosts matched
+2024-03-07 00:53:18,830 p=185890 u=vissol n=ansible | PLAY RECAP *******************************************************************************************************************************************************************************************************************************************************************
+2024-03-07 00:57:04,594 p=186546 u=vissol n=ansible | ansible-playbook [core 2.15.6]
+  config file = /home/vissol/softs/dev-projects/debian-hard-ansible/ansible.cfg
+  configured module search path = ['/home/vissol/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vissol/.local/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/vissol/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.2 (default, Feb 28 2021, 17:03:44) [GCC 10.2.1 20210110] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+2024-03-07 00:57:04,594 p=186546 u=vissol n=ansible | Using /home/vissol/softs/dev-projects/debian-hard-ansible/ansible.cfg as config file
+2024-03-07 00:57:04,758 p=186546 u=vissol n=ansible | host_list declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/ansible as it did not pass its verify_file() method
+2024-03-07 00:57:04,759 p=186546 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 00:57:04,759 p=186546 u=vissol n=ansible | script declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/ansible as it did not pass its verify_file() method
+2024-03-07 00:57:04,759 p=186546 u=vissol n=ansible | auto declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/ansible as it did not pass its verify_file() method
+2024-03-07 00:57:04,759 p=186546 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 00:57:04,759 p=186546 u=vissol n=ansible | yaml declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/ansible as it did not pass its verify_file() method
+2024-03-07 00:57:04,759 p=186546 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 00:57:04,759 p=186546 u=vissol n=ansible | ini declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/ansible as it did not pass its verify_file() method
+2024-03-07 00:57:04,759 p=186546 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 00:57:04,759 p=186546 u=vissol n=ansible | toml declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/ansible as it did not pass its verify_file() method
+2024-03-07 00:57:04,760 p=186546 u=vissol n=ansible | [WARNING]: Unable to parse /home/vissol/softs/dev-projects/debian-hard-ansible/ansible as an inventory source
+
+2024-03-07 00:57:04,760 p=186546 u=vissol n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-03-07 00:57:04,764 p=186546 u=vissol n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2024-03-07 00:57:04,915 p=186546 u=vissol n=ansible | redirecting (type: callback) ansible.builtin.debug to ansible.posix.debug
+2024-03-07 00:57:04,916 p=186546 u=vissol n=ansible | redirecting (type: callback) ansible.builtin.debug to ansible.posix.debug
+2024-03-07 00:57:04,930 p=186546 u=vissol n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-03-07 00:57:04,930 p=186546 u=vissol n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-03-07 00:57:04,930 p=186546 u=vissol n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-03-07 00:57:04,930 p=186546 u=vissol n=ansible | PLAYBOOK: Bash_aliases.yml ***************************************************************************************************************************************************************************************************************************************************
+2024-03-07 00:57:04,930 p=186546 u=vissol n=ansible | 1 plays in Bash_aliases.yml
+2024-03-07 00:57:04,932 p=186546 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 00:57:04,933 p=186546 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 00:57:04,934 p=186546 u=vissol n=ansible | PLAY [all] *******************************************************************************************************************************************************************************************************************************************************************
+2024-03-07 00:57:04,934 p=186546 u=vissol n=ansible | skipping: no hosts matched
+2024-03-07 00:57:04,934 p=186546 u=vissol n=ansible | PLAY RECAP *******************************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:06:58,261 p=186877 u=vissol n=ansible | ansible-playbook [core 2.15.6]
+  config file = /home/vissol/softs/dev-projects/debian-hard-ansible/ansible.cfg
+  configured module search path = ['/home/vissol/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vissol/.local/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/vissol/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.2 (default, Feb 28 2021, 17:03:44) [GCC 10.2.1 20210110] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+2024-03-07 01:06:58,262 p=186877 u=vissol n=ansible | Using /home/vissol/softs/dev-projects/debian-hard-ansible/ansible.cfg as config file
+2024-03-07 01:06:58,418 p=186877 u=vissol n=ansible | host_list declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/ansible as it did not pass its verify_file() method
+2024-03-07 01:06:58,418 p=186877 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 01:06:58,418 p=186877 u=vissol n=ansible | script declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/ansible as it did not pass its verify_file() method
+2024-03-07 01:06:58,418 p=186877 u=vissol n=ansible | auto declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/ansible as it did not pass its verify_file() method
+2024-03-07 01:06:58,419 p=186877 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 01:06:58,419 p=186877 u=vissol n=ansible | yaml declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/ansible as it did not pass its verify_file() method
+2024-03-07 01:06:58,419 p=186877 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 01:06:58,419 p=186877 u=vissol n=ansible | ini declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/ansible as it did not pass its verify_file() method
+2024-03-07 01:06:58,419 p=186877 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 01:06:58,419 p=186877 u=vissol n=ansible | toml declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/ansible as it did not pass its verify_file() method
+2024-03-07 01:06:58,419 p=186877 u=vissol n=ansible | [WARNING]: Unable to parse /home/vissol/softs/dev-projects/debian-hard-ansible/ansible as an inventory source
+
+2024-03-07 01:06:58,420 p=186877 u=vissol n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-03-07 01:06:58,424 p=186877 u=vissol n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2024-03-07 01:06:58,579 p=186877 u=vissol n=ansible | redirecting (type: callback) ansible.builtin.debug to ansible.posix.debug
+2024-03-07 01:06:58,580 p=186877 u=vissol n=ansible | redirecting (type: callback) ansible.builtin.debug to ansible.posix.debug
+2024-03-07 01:06:58,595 p=186877 u=vissol n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-03-07 01:06:58,595 p=186877 u=vissol n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-03-07 01:06:58,595 p=186877 u=vissol n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-03-07 01:06:58,595 p=186877 u=vissol n=ansible | PLAYBOOK: Bash_aliases.yml ***************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:06:58,596 p=186877 u=vissol n=ansible | 1 plays in Bash_aliases.yml
+2024-03-07 01:06:58,597 p=186877 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:06:58,599 p=186877 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:06:58,599 p=186877 u=vissol n=ansible | PLAY [all] *******************************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:06:58,600 p=186877 u=vissol n=ansible | skipping: no hosts matched
+2024-03-07 01:06:58,600 p=186877 u=vissol n=ansible | PLAY RECAP *******************************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:08:11,046 p=186928 u=vissol n=ansible | ansible-playbook [core 2.15.6]
+  config file = /home/vissol/softs/dev-projects/debian-hard-ansible/ansible.cfg
+  configured module search path = ['/home/vissol/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vissol/.local/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/vissol/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.2 (default, Feb 28 2021, 17:03:44) [GCC 10.2.1 20210110] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+2024-03-07 01:08:11,047 p=186928 u=vissol n=ansible | Using /home/vissol/softs/dev-projects/debian-hard-ansible/ansible.cfg as config file
+2024-03-07 01:08:11,205 p=186928 u=vissol n=ansible | host_list declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/managed1 as it did not pass its verify_file() method
+2024-03-07 01:08:11,205 p=186928 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 01:08:11,205 p=186928 u=vissol n=ansible | script declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/managed1 as it did not pass its verify_file() method
+2024-03-07 01:08:11,205 p=186928 u=vissol n=ansible | auto declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/managed1 as it did not pass its verify_file() method
+2024-03-07 01:08:11,205 p=186928 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 01:08:11,205 p=186928 u=vissol n=ansible | yaml declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/managed1 as it did not pass its verify_file() method
+2024-03-07 01:08:11,206 p=186928 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 01:08:11,206 p=186928 u=vissol n=ansible | ini declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/managed1 as it did not pass its verify_file() method
+2024-03-07 01:08:11,206 p=186928 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 01:08:11,206 p=186928 u=vissol n=ansible | toml declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/managed1 as it did not pass its verify_file() method
+2024-03-07 01:08:11,206 p=186928 u=vissol n=ansible | [WARNING]: Unable to parse /home/vissol/softs/dev-projects/debian-hard-ansible/managed1 as an inventory source
+
+2024-03-07 01:08:11,206 p=186928 u=vissol n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-03-07 01:08:11,211 p=186928 u=vissol n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2024-03-07 01:08:11,373 p=186928 u=vissol n=ansible | redirecting (type: callback) ansible.builtin.debug to ansible.posix.debug
+2024-03-07 01:08:11,375 p=186928 u=vissol n=ansible | redirecting (type: callback) ansible.builtin.debug to ansible.posix.debug
+2024-03-07 01:08:11,399 p=186928 u=vissol n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-03-07 01:08:11,399 p=186928 u=vissol n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-03-07 01:08:11,399 p=186928 u=vissol n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-03-07 01:08:11,400 p=186928 u=vissol n=ansible | PLAYBOOK: Bash_aliases.yml ***************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:08:11,400 p=186928 u=vissol n=ansible | 1 plays in Bash_aliases.yml
+2024-03-07 01:08:11,401 p=186928 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:08:11,402 p=186928 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:08:11,403 p=186928 u=vissol n=ansible | PLAY [all] *******************************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:08:11,403 p=186928 u=vissol n=ansible | skipping: no hosts matched
+2024-03-07 01:08:11,404 p=186928 u=vissol n=ansible | PLAY RECAP *******************************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:17:40,825 p=187288 u=vissol n=ansible | ansible-playbook [core 2.15.6]
+  config file = /home/vissol/softs/dev-projects/debian-hard-ansible/ansible.cfg
+  configured module search path = ['/home/vissol/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vissol/.local/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/vissol/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.2 (default, Feb 28 2021, 17:03:44) [GCC 10.2.1 20210110] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+2024-03-07 01:17:40,825 p=187288 u=vissol n=ansible | Using /home/vissol/softs/dev-projects/debian-hard-ansible/ansible.cfg as config file
+2024-03-07 01:17:41,100 p=187288 u=vissol n=ansible | host_list declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini as it did not pass its verify_file() method
+2024-03-07 01:17:41,100 p=187288 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 01:17:41,100 p=187288 u=vissol n=ansible | script declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini as it did not pass its verify_file() method
+2024-03-07 01:17:41,100 p=187288 u=vissol n=ansible | auto declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini as it did not pass its verify_file() method
+2024-03-07 01:17:41,101 p=187288 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 01:17:41,101 p=187288 u=vissol n=ansible | yaml declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini as it did not pass its verify_file() method
+2024-03-07 01:17:41,101 p=187288 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 01:17:41,101 p=187288 u=vissol n=ansible | ini declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini as it did not pass its verify_file() method
+2024-03-07 01:17:41,101 p=187288 u=vissol n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2024-03-07 01:17:41,101 p=187288 u=vissol n=ansible | toml declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini as it did not pass its verify_file() method
+2024-03-07 01:17:41,102 p=187288 u=vissol n=ansible | [WARNING]: Unable to parse /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini as an inventory source
+
+2024-03-07 01:17:41,102 p=187288 u=vissol n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-03-07 01:17:41,109 p=187288 u=vissol n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2024-03-07 01:17:41,355 p=187288 u=vissol n=ansible | redirecting (type: callback) ansible.builtin.debug to ansible.posix.debug
+2024-03-07 01:17:41,357 p=187288 u=vissol n=ansible | redirecting (type: callback) ansible.builtin.debug to ansible.posix.debug
+2024-03-07 01:17:41,382 p=187288 u=vissol n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-03-07 01:17:41,382 p=187288 u=vissol n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-03-07 01:17:41,382 p=187288 u=vissol n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-03-07 01:17:41,383 p=187288 u=vissol n=ansible | PLAYBOOK: Bash_aliases.yml ***************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:17:41,383 p=187288 u=vissol n=ansible | 1 plays in Bash_aliases.yml
+2024-03-07 01:17:41,385 p=187288 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:17:41,387 p=187288 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:17:41,388 p=187288 u=vissol n=ansible | PLAY [all] *******************************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:17:41,388 p=187288 u=vissol n=ansible | skipping: no hosts matched
+2024-03-07 01:17:41,388 p=187288 u=vissol n=ansible | PLAY RECAP *******************************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:18:26,326 p=187346 u=vissol n=ansible | ansible-playbook [core 2.15.6]
+  config file = /home/vissol/softs/dev-projects/debian-hard-ansible/ansible.cfg
+  configured module search path = ['/home/vissol/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vissol/.local/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/vissol/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.2 (default, Feb 28 2021, 17:03:44) [GCC 10.2.1 20210110] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+2024-03-07 01:18:26,327 p=187346 u=vissol n=ansible | Using /home/vissol/softs/dev-projects/debian-hard-ansible/ansible.cfg as config file
+2024-03-07 01:18:26,473 p=187346 u=vissol n=ansible | host_list declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini as it did not pass its verify_file() method
+2024-03-07 01:18:26,473 p=187346 u=vissol n=ansible | script declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini as it did not pass its verify_file() method
+2024-03-07 01:18:26,473 p=187346 u=vissol n=ansible | auto declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini as it did not pass its verify_file() method
+2024-03-07 01:18:26,474 p=187346 u=vissol n=ansible | yaml declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini as it did not pass its verify_file() method
+2024-03-07 01:18:26,475 p=187346 u=vissol n=ansible | Parsed /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini inventory source with ini plugin
+2024-03-07 01:18:26,633 p=187346 u=vissol n=ansible | redirecting (type: callback) ansible.builtin.debug to ansible.posix.debug
+2024-03-07 01:18:26,635 p=187346 u=vissol n=ansible | redirecting (type: callback) ansible.builtin.debug to ansible.posix.debug
+2024-03-07 01:18:26,649 p=187346 u=vissol n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-03-07 01:18:26,650 p=187346 u=vissol n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-03-07 01:18:26,650 p=187346 u=vissol n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-03-07 01:18:26,650 p=187346 u=vissol n=ansible | PLAYBOOK: Bash_aliases.yml ***************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:18:26,651 p=187346 u=vissol n=ansible | 1 plays in Bash_aliases.yml
+2024-03-07 01:18:26,652 p=187346 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:18:26,653 p=187346 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:18:26,654 p=187346 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:18:26,655 p=187346 u=vissol n=ansible | PLAY [all] *******************************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:18:26,667 p=187346 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:18:26,694 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:26,695 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''
+2024-03-07 01:18:26,836 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'/home/vagrant\n', b"Warning: Permanently added '[127.0.0.1]:2222' (ECDSA) to the list of known hosts.\r\n")
+2024-03-07 01:18:26,837 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:26,837 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/vagrant/.ansible/tmp `"&& mkdir "` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770706.8360329-187350-259278198281747 `" && echo ansible-tmp-1709770706.8360329-187350-259278198281747="` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770706.8360329-187350-259278198281747 `" ) && sleep 0'"'"''
+2024-03-07 01:18:26,856 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'ansible-tmp-1709770706.8360329-187350-259278198281747=/home/vagrant/.ansible/tmp/ansible-tmp-1709770706.8360329-187350-259278198281747\n', b'')
+2024-03-07 01:18:27,114 p=187346 u=vissol n=ansible | Using module file /home/vissol/.local/lib/python3.9/site-packages/ansible/modules/setup.py
+2024-03-07 01:18:27,114 p=187346 u=vissol n=ansible | <127.0.0.1> PUT /home/vissol/.ansible/tmp/ansible-local-187346n9uksukn/tmpvrtou8ty TO /home/vagrant/.ansible/tmp/ansible-tmp-1709770706.8360329-187350-259278198281747/AnsiballZ_setup.py
+2024-03-07 01:18:27,115 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' '[127.0.0.1]'
+2024-03-07 01:18:27,164 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'sftp> put /home/vissol/.ansible/tmp/ansible-local-187346n9uksukn/tmpvrtou8ty /home/vagrant/.ansible/tmp/ansible-tmp-1709770706.8360329-187350-259278198281747/AnsiballZ_setup.py\n', b'')
+2024-03-07 01:18:27,165 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:27,165 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1709770706.8360329-187350-259278198281747/ /home/vagrant/.ansible/tmp/ansible-tmp-1709770706.8360329-187350-259278198281747/AnsiballZ_setup.py && sleep 0'"'"''
+2024-03-07 01:18:27,181 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:18:27,182 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:27,182 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' -tt 127.0.0.1 '/bin/sh -c '"'"'/usr/bin/python3 /home/vagrant/.ansible/tmp/ansible-tmp-1709770706.8360329-187350-259278198281747/AnsiballZ_setup.py && sleep 0'"'"''
+2024-03-07 01:18:27,978 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'\r\n{"ansible_facts": {"ansible_cmdline": {"BOOT_IMAGE": "/boot/vmlinuz-5.10.0-22-amd64", "root": "UUID=c62a50a0-9eed-4d76-86ad-b53c695efb0d", "ro": true, "consoleblank": "0", "elevator": "noop", "scsi_mod.use_blk_mq": "Y", "net.ifnames": "0", "biosdevname": "0"}, "ansible_proc_cmdline": {"BOOT_IMAGE": "/boot/vmlinuz-5.10.0-22-amd64", "root": "UUID=c62a50a0-9eed-4d76-86ad-b53c695efb0d", "ro": true, "consoleblank": "0", "elevator": "noop", "scsi_mod.use_blk_mq": "Y", "net.ifnames": "0", "biosdevname": "0"}, "ansible_system": "Linux", "ansible_kernel": "5.10.0-22-amd64", "ansible_kernel_version": "#1 SMP Debian 5.10.178-3 (2023-04-22)", "ansible_machine": "x86_64", "ansible_python_version": "3.9.2", "ansible_fqdn": "bullseye", "ansible_hostname": "bullseye", "ansible_nodename": "bullseye", "ansible_domain": "", "ansible_userspace_bits": "64", "ansible_architecture": "x86_64", "ansible_userspace_architecture": "x86_64", "ansible_machine_id": "27f15f113f5b459b85abdd642db15328", "ansible_user_id": "vagrant", "ansible_user_uid": 1000, "ansible_user_gid": 1000, "ansible_user_gecos": "", "ansible_user_dir": "/home/vagrant", "ansible_user_shell": "/bin/bash", "ansible_real_user_id": 1000, "ansible_effective_user_id": 1000, "ansible_real_group_id": 1000, "ansible_effective_group_id": 1000, "ansible_apparmor": {"status": "enabled"}, "ansible_local": {}, "ansible_date_time": {"year": "2024", "month": "03", "weekday": "Thursday", "weekday_number": "4", "weeknumber": "10", "day": "07", "hour": "00", "minute": "18", "second": "27", "epoch": "1709770707", "epoch_int": "1709770707", "date": "2024-03-07", "time": "00:18:27", "iso8601_micro": "2024-03-07T00:18:27.550210Z", "iso8601": "2024-03-07T00:18:27Z", "iso8601_basic": "20240307T001827550210", "iso8601_basic_short": "20240307T001827", "tz": "UTC", "tz_dst": "UTC", "tz_offset": "+0000"}, "ansible_is_chroot": false, "ansible_distribution": "Debian", "ansible_distribution_release": "bullseye", "ansible_distribution_version": "11.7", "ansible_distribution_major_version": "11", "ansible_distribution_file_path": "/etc/os-release", "ansible_distribution_file_variety": "Debian", "ansible_distribution_file_parsed": true, "ansible_distribution_minor_version": "7", "ansible_os_family": "Debian", "ansible_virtualization_role": "guest", "ansible_virtualization_type": "virtualbox", "ansible_virtualization_tech_guest": ["virtualbox"], "ansible_virtualization_tech_host": [], "ansible_fips": false, "ansible_processor": ["0", "GenuineIntel", "Intel(R) Core(TM) i7-6820HQ CPU @ 2.70GHz"], "ansible_processor_count": 1, "ansible_processor_cores": 1, "ansible_processor_threads_per_core": 1, "ansible_processor_vcpus": 1, "ansible_processor_nproc": 1, "ansible_memtotal_mb": 1971, "ansible_memfree_mb": 352, "ansible_swaptotal_mb": 0, "ansible_swapfree_mb": 0, "ansible_memory_mb": {"real": {"total": 1971, "used": 1619, "free": 352}, "nocache": {"free": 1741, "used": 230}, "swap": {"total": 0, "free": 0, "used": 0, "cached": 0}}, "ansible_bios_date": "12/01/2006", "ansible_bios_vendor": "innotek GmbH", "ansible_bios_version": "VirtualBox", "ansible_board_asset_tag": "NA", "ansible_board_name": "VirtualBox", "ansible_board_serial": "NA", "ansible_board_vendor": "Oracle Corporation", "ansible_board_version": "1.2", "ansible_chassis_asset_tag": "NA", "ansible_chassis_serial": "NA", "ansible_chassis_vendor": "Oracle Corporation", "ansible_chassis_version": "NA", "ansible_form_factor": "Other", "ansible_product_name": "VirtualBox", "ansible_product_serial": "NA", "ansible_product_uuid": "NA", "ansible_product_version": "1.2", "ansible_system_vendor": "innotek GmbH", "ansible_devices": {"sda": {"virtual": 1, "links": {"ids": ["ata-VBOX_HARDDISK_VB476501fb-c4ae7f1e"], "uuids": [], "labels": [], "masters": []}, "vendor": "ATA", "model": "VBOX HARDDISK", "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "0", "partitions": {"sda1": {"links": {"ids": ["ata-VBOX_HARDDISK_VB476501fb-c4ae7f1e-part1"], "uuids": ["c62a50a0-9eed-4d76-86ad-b53c695efb0d"], "labels": [], "masters": []}, "start": "2048", "sectors": "41940992", "sectorsize": 512, "size": "20.00 GB", "uuid": "c62a50a0-9eed-4d76-86ad-b53c695efb0d", "holders": []}}, "rotational": "1", "scheduler_mode": "mq-deadline", "sectors": "41943040", "sectorsize": "512", "size": "20.00 GB", "host": "SATA controller: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode] (rev 02)", "holders": []}}, "ansible_device_links": {"ids": {"sda1": ["ata-VBOX_HARDDISK_VB476501fb-c4ae7f1e-part1"], "sda": ["ata-VBOX_HARDDISK_VB476501fb-c4ae7f1e"]}, "uuids": {"sda1": ["c62a50a0-9eed-4d76-86ad-b53c695efb0d"]}, "labels": {}, "masters": {}}, "ansible_uptime_seconds": 6887, "ansible_lvm": "N/A", "ansible_mounts": [{"mount": "/", "device": "/dev/sda1", "fstype": "ext4", "options": "rw,relatime,discard,errors=remount-ro", "size_total": 20956397568, "size_available": 17703612416, "block_size": 4096, "block_total": 5116308, "block_available": 4322171, "block_used": 794137, "inode_total": 1310720, "inode_available": 1234484, "inode_used": 76236, "uuid": "c62a50a0-9eed-4d76-86ad-b53c695efb0d"}], "ansible_system_capabilities_enforced": "True", "ansible_system_capabilities": [""], "ansible_hostnqn": "", "ansible_interfaces": ["lo", "eth1", "eth0"], "ansible_lo": {"device": "lo", "mtu": 65536, "active": true, "type": "loopback", "promisc": false, "ipv4": {"address": "127.0.0.1", "broadcast": "", "netmask": "255.0.0.0", "network": "127.0.0.0", "prefix": "8"}, "ipv6": [{"address": "::1", "prefix": "128", "scope": "host"}]}, "ansible_eth0": {"device": "eth0", "macaddress": "08:00:27:8d:c0:4d", "mtu": 1500, "active": true, "module": "e1000", "type": "ether", "pciid": "0000:00:03.0", "speed": 1000, "promisc": false, "ipv4": {"address": "10.0.2.15", "broadcast": "10.0.2.255", "netmask": "255.255.255.0", "network": "10.0.2.0", "prefix": "24"}, "ipv6": [{"address": "fe80::a00:27ff:fe8d:c04d", "prefix": "64", "scope": "link"}]}, "ansible_eth1": {"device": "eth1", "macaddress": "08:00:27:27:1b:59", "mtu": 1500, "active": true, "module": "e1000", "type": "ether", "pciid": "0000:00:08.0", "speed": 1000, "promisc": false, "ipv4": {"address": "192.168.1.57", "broadcast": "192.168.1.255", "netmask": "255.255.255.0", "network": "192.168.1.0", "prefix": "24"}, "ipv6": [{"address": "2a01:cb19:f93:9a00:a00:27ff:fe27:1b59", "prefix": "64", "scope": "global"}, {"address": "fe80::a00:27ff:fe27:1b59", "prefix": "64", "scope": "link"}]}, "ansible_default_ipv4": {"gateway": "10.0.2.2", "interface": "eth0", "address": "10.0.2.15", "broadcast": "10.0.2.255", "netmask": "255.255.255.0", "network": "10.0.2.0", "prefix": "24", "macaddress": "08:00:27:8d:c0:4d", "mtu": 1500, "type": "ether", "alias": "eth0"}, "ansible_default_ipv6": {"gateway": "fe80::3e98:72ff:fee2:5cbe", "interface": "eth1", "address": "2a01:cb19:f93:9a00:a00:27ff:fe27:1b59", "prefix": "64", "scope": "global", "macaddress": "08:00:27:27:1b:59", "mtu": 1500, "type": "ether"}, "ansible_all_ipv4_addresses": ["10.0.2.15", "192.168.1.57"], "ansible_all_ipv6_addresses": ["fe80::a00:27ff:fe8d:c04d", "2a01:cb19:f93:9a00:a00:27ff:fe27:1b59", "fe80::a00:27ff:fe27:1b59"], "ansible_locally_reachable_ips": {"ipv4": ["10.0.2.15", "127.0.0.0/8", "127.0.0.1", "192.168.1.57"], "ipv6": ["::1", "2a01:cb19:f93:9a00:a00:27ff:fe27:1b59", "fe80::a00:27ff:fe27:1b59", "fe80::a00:27ff:fe8d:c04d"]}, "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCw5Ja3fyxj+lIp9QlzicdiHf6DqwPcvCuZYMDPlAC18QKqtSHBR5Z6wuW4xja7M/4oGSpwHsHjTeWmQ8WwVmz6Y9vXF0vlSbIhdwOgh6M9GsnShgdCGnC0pQKNmZdEXF2u/1O+XKKgch+geNH7w2/gryVwuArfk30wMyj/TEga62kROs6S92W8tttmEWJ8L4eZt3tDSc1lq1yR1SB7jQe7yu1TZD4tU+LhkBuQ5MJeMn6eVyFF8t/QHijIP3MWGhzJj/WWp8GymGdqoATjusJY0CumNzzRWVgQ06qRDO6N2S+WmyaT0PPcIYCw5MfQnYHXvtw6aahOzeQgx/MnngfLQFx3TtrZq/Vk7xD2FtvbZ4mghizEp4OiVlSdhq79WeOOSQmtq+Yw+7mwc2yW6nIV5oICw3tE+gEAQFCAiqxDJZGdkeuySxaBHzpn3728HVopjShBp+gNRv8ajgUPNuz/vUWmuvklee3VepGK6dkiiLen53owHlmxnq8dJNHIMzs=", "ansible_ssh_host_key_rsa_public_keytype": "ssh-rsa", "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIP+Eq8R0hjnNzje83VT5wEExkWU1G3ZQmp/6mMutJJhskXYPDnJtcMoEwJg+uT4LCHQ/iI8Qzhi9Ys11bAS3L0=", "ansible_ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256", "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIKpy+jNzja+hGGVLgl6pToZ/I5rFaizrii5tp5J5XnIg", "ansible_ssh_host_key_ed25519_public_keytype": "ssh-ed25519", "ansible_iscsi_iqn": "", "ansible_fibre_channel_wwn": [], "ansible_python": {"version": {"major": 3, "minor": 9, "micro": 2, "releaselevel": "final", "serial": 0}, "version_info": [3, 9, 2, "final", 0], "executable": "/usr/bin/python3", "has_sslcontext": true, "type": "cpython"}, "ansible_loadavg": {"1m": 0.0, "5m": 0.0, "15m": 0.0}, "ansible_selinux_python_present": true, "ansible_selinux": {"status": "disabled"}, "ansible_lsb": {"id": "Debian", "description": "Debian GNU/Linux 11 (bullseye)", "release": "11", "codename": "bullseye", "major_release": "11"}, "ansible_dns": {"domain": "home", "search": ["home"], "nameservers": ["192.168.1.1"]}, "ansible_env": {"USER": "vagrant", "SSH_CLIENT": "10.0.2.2 56116 22", "XDG_SESSION_TYPE": "tty", "SHLVL": "0", "MOTD_SHOWN": "pam", "HOME": "/home/vagrant", "SSH_TTY": "/dev/pts/0", "LOGNAME": "vagrant", "_": "/bin/sh", "XDG_SESSION_CLASS": "user", "TERM": "xterm-256color", "XDG_SESSION_ID": "8", "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/games", "XDG_RUNTIME_DIR": "/run/user/1000", "LANG": "C.UTF-8", "SHELL": "/bin/bash", "PWD": "/home/vagrant", "SSH_CONNECTION": "10.0.2.2 56116 10.0.2.15 22"}, "ansible_service_mgr": "systemd", "ansible_pkg_mgr": "apt", "gather_subset": ["all"], "module_setup": true}, "invocation": {"module_args": {"gather_subset": ["all"], "gather_timeout": 10, "filter": [], "fact_path": "/etc/ansible/facts.d"}}}\r\n', b'Shared connection to 127.0.0.1 closed.\r\n')
+2024-03-07 01:18:27,978 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:27,979 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1709770706.8360329-187350-259278198281747/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-03-07 01:18:27,995 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:18:28,004 p=187346 u=vissol n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:18:28,005 p=187346 u=vissol n=ansible | ok: [managed1]
+2024-03-07 01:18:28,013 p=187346 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:18:28,020 p=187346 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:18:28,025 p=187346 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:18:28,043 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:28,044 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''
+2024-03-07 01:18:28,060 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'/home/vagrant\n', b'')
+2024-03-07 01:18:28,060 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:28,061 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/vagrant/.ansible/tmp `"&& mkdir "` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770708.0592983-187362-165029955556768 `" && echo ansible-tmp-1709770708.0592983-187362-165029955556768="` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770708.0592983-187362-165029955556768 `" ) && sleep 0'"'"''
+2024-03-07 01:18:28,082 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'ansible-tmp-1709770708.0592983-187362-165029955556768=/home/vagrant/.ansible/tmp/ansible-tmp-1709770708.0592983-187362-165029955556768\n', b'')
+2024-03-07 01:18:28,258 p=187346 u=vissol n=ansible | Using module file /home/vissol/.local/lib/python3.9/site-packages/ansible/modules/apt.py
+2024-03-07 01:18:28,258 p=187346 u=vissol n=ansible | <127.0.0.1> PUT /home/vissol/.ansible/tmp/ansible-local-187346n9uksukn/tmp7rug8h4r TO /home/vagrant/.ansible/tmp/ansible-tmp-1709770708.0592983-187362-165029955556768/AnsiballZ_apt.py
+2024-03-07 01:18:28,259 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' '[127.0.0.1]'
+2024-03-07 01:18:28,303 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'sftp> put /home/vissol/.ansible/tmp/ansible-local-187346n9uksukn/tmp7rug8h4r /home/vagrant/.ansible/tmp/ansible-tmp-1709770708.0592983-187362-165029955556768/AnsiballZ_apt.py\n', b'')
+2024-03-07 01:18:28,304 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:28,304 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1709770708.0592983-187362-165029955556768/ /home/vagrant/.ansible/tmp/ansible-tmp-1709770708.0592983-187362-165029955556768/AnsiballZ_apt.py && sleep 0'"'"''
+2024-03-07 01:18:28,321 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:18:28,322 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:28,322 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' -tt 127.0.0.1 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-aoutfpuffklanwnmpfjvvizsymoijilo ; /usr/bin/python3 /home/vagrant/.ansible/tmp/ansible-tmp-1709770708.0592983-187362-165029955556768/AnsiballZ_apt.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-03-07 01:18:28,354 p=187346 u=vissol n=ansible | Escalation succeeded
+2024-03-07 01:18:30,208 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'\r\n\r\n{"changed": true, "stdout": "Reading package lists...\\nBuilding dependency tree...\\nReading state information...\\nThe following NEW packages will be installed:\\n  linuxlogo\\n0 upgraded, 1 newly installed, 0 to remove and 60 not upgraded.\\nInst linuxlogo (6.0-0.1 Debian:11.9/oldstable [amd64])\\nConf linuxlogo (6.0-0.1 Debian:11.9/oldstable [amd64])\\n", "stderr": "", "diff": {}, "cache_updated": false, "cache_update_time": 1709764356, "invocation": {"module_args": {"name": "linuxlogo", "state": "present", "package": ["linuxlogo"], "update_cache_retries": 5, "update_cache_retry_max_delay": 12, "cache_valid_time": 0, "purge": false, "force": false, "upgrade": null, "dpkg_options": "force-confdef,force-confold", "autoremove": false, "autoclean": false, "fail_on_autoremove": false, "only_upgrade": false, "force_apt_get": false, "clean": false, "allow_unauthenticated": false, "allow_downgrade": false, "allow_change_held_packages": false, "lock_timeout": 60, "update_cache": null, "deb": null, "default_release": null, "install_recommends": null, "policy_rc_d": null}}}\r\n', b'Shared connection to 127.0.0.1 closed.\r\n')
+2024-03-07 01:18:30,209 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:30,209 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1709770708.0592983-187362-165029955556768/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-03-07 01:18:30,227 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:18:30,229 p=187346 u=vissol n=ansible | TASK [Install linuxlogo package] *********************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:18:30,229 p=187346 u=vissol n=ansible | changed: [managed1] => {
+    "cache_update_time": 1709764356,
+    "cache_updated": false,
+    "changed": true,
+    "diff": {},
+    "invocation": {
+        "module_args": {
+            "allow_change_held_packages": false,
+            "allow_downgrade": false,
+            "allow_unauthenticated": false,
+            "autoclean": false,
+            "autoremove": false,
+            "cache_valid_time": 0,
+            "clean": false,
+            "deb": null,
+            "default_release": null,
+            "dpkg_options": "force-confdef,force-confold",
+            "fail_on_autoremove": false,
+            "force": false,
+            "force_apt_get": false,
+            "install_recommends": null,
+            "lock_timeout": 60,
+            "name": "linuxlogo",
+            "only_upgrade": false,
+            "package": [
+                "linuxlogo"
+            ],
+            "policy_rc_d": null,
+            "purge": false,
+            "state": "present",
+            "update_cache": null,
+            "update_cache_retries": 5,
+            "update_cache_retry_max_delay": 12,
+            "upgrade": null
+        }
+    }
+}
+
+STDOUT:
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  linuxlogo
+0 upgraded, 1 newly installed, 0 to remove and 60 not upgraded.
+Inst linuxlogo (6.0-0.1 Debian:11.9/oldstable [amd64])
+Conf linuxlogo (6.0-0.1 Debian:11.9/oldstable [amd64])
+
+
+2024-03-07 01:18:30,236 p=187346 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:18:30,259 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:30,260 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''
+2024-03-07 01:18:30,278 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'/home/vagrant\n', b'')
+2024-03-07 01:18:30,279 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:30,279 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/vagrant/.ansible/tmp `"&& mkdir "` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770710.2771323-187372-135551315604009 `" && echo ansible-tmp-1709770710.2771323-187372-135551315604009="` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770710.2771323-187372-135551315604009 `" ) && sleep 0'"'"''
+2024-03-07 01:18:30,303 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'ansible-tmp-1709770710.2771323-187372-135551315604009=/home/vagrant/.ansible/tmp/ansible-tmp-1709770710.2771323-187372-135551315604009\n', b'')
+2024-03-07 01:18:30,449 p=187346 u=vissol n=ansible | Using module file /home/vissol/.local/lib/python3.9/site-packages/ansible/modules/file.py
+2024-03-07 01:18:30,449 p=187346 u=vissol n=ansible | <127.0.0.1> PUT /home/vissol/.ansible/tmp/ansible-local-187346n9uksukn/tmps3ip06cy TO /home/vagrant/.ansible/tmp/ansible-tmp-1709770710.2771323-187372-135551315604009/AnsiballZ_file.py
+2024-03-07 01:18:30,450 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' '[127.0.0.1]'
+2024-03-07 01:18:30,489 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'sftp> put /home/vissol/.ansible/tmp/ansible-local-187346n9uksukn/tmps3ip06cy /home/vagrant/.ansible/tmp/ansible-tmp-1709770710.2771323-187372-135551315604009/AnsiballZ_file.py\n', b'')
+2024-03-07 01:18:30,490 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:30,493 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1709770710.2771323-187372-135551315604009/ /home/vagrant/.ansible/tmp/ansible-tmp-1709770710.2771323-187372-135551315604009/AnsiballZ_file.py && sleep 0'"'"''
+2024-03-07 01:18:30,507 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:18:30,507 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:30,508 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' -tt 127.0.0.1 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-ulczwkxdymbaqpsjvcxyliuipxvcpwgi ; /usr/bin/python3 /home/vagrant/.ansible/tmp/ansible-tmp-1709770710.2771323-187372-135551315604009/AnsiballZ_file.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-03-07 01:18:30,537 p=187346 u=vissol n=ansible | Escalation succeeded
+2024-03-07 01:18:30,759 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'\r\n\r\n{"dest": "/home/vagrant/.bash_aliases", "changed": true, "invocation": {"module_args": {"path": "/home/vagrant/.bash_aliases", "state": "touch", "owner": "vagrant", "group": "vagrant", "recurse": false, "force": false, "follow": true, "modification_time_format": "%Y%m%d%H%M.%S", "access_time_format": "%Y%m%d%H%M.%S", "unsafe_writes": false, "_original_basename": null, "_diff_peek": null, "src": null, "modification_time": null, "access_time": null, "mode": null, "seuser": null, "serole": null, "selevel": null, "setype": null, "attributes": null}}}\r\n', b'Shared connection to 127.0.0.1 closed.\r\n')
+2024-03-07 01:18:30,759 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:30,760 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1709770710.2771323-187372-135551315604009/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-03-07 01:18:30,792 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:18:30,793 p=187346 u=vissol n=ansible | TASK [Create .bash_aliases file] *********************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:18:30,795 p=187346 u=vissol n=ansible | changed: [managed1] => {
+    "changed": true,
+    "dest": "/home/vagrant/.bash_aliases",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": "vagrant",
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "vagrant",
+            "path": "/home/vagrant/.bash_aliases",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "touch",
+            "unsafe_writes": false
+        }
+    }
+}
+2024-03-07 01:18:30,807 p=187346 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:18:30,834 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:30,835 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''
+2024-03-07 01:18:30,855 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'/home/vagrant\n', b'')
+2024-03-07 01:18:30,855 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:30,856 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/vagrant/.ansible/tmp `"&& mkdir "` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770710.8539224-187381-198300771974323 `" && echo ansible-tmp-1709770710.8539224-187381-198300771974323="` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770710.8539224-187381-198300771974323 `" ) && sleep 0'"'"''
+2024-03-07 01:18:30,879 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'ansible-tmp-1709770710.8539224-187381-198300771974323=/home/vagrant/.ansible/tmp/ansible-tmp-1709770710.8539224-187381-198300771974323\n', b'')
+2024-03-07 01:18:31,021 p=187346 u=vissol n=ansible | Using module file /home/vissol/.local/lib/python3.9/site-packages/ansible/modules/blockinfile.py
+2024-03-07 01:18:31,021 p=187346 u=vissol n=ansible | <127.0.0.1> PUT /home/vissol/.ansible/tmp/ansible-local-187346n9uksukn/tmp268tymfv TO /home/vagrant/.ansible/tmp/ansible-tmp-1709770710.8539224-187381-198300771974323/AnsiballZ_blockinfile.py
+2024-03-07 01:18:31,022 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' '[127.0.0.1]'
+2024-03-07 01:18:31,060 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'sftp> put /home/vissol/.ansible/tmp/ansible-local-187346n9uksukn/tmp268tymfv /home/vagrant/.ansible/tmp/ansible-tmp-1709770710.8539224-187381-198300771974323/AnsiballZ_blockinfile.py\n', b'')
+2024-03-07 01:18:31,061 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:31,062 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1709770710.8539224-187381-198300771974323/ /home/vagrant/.ansible/tmp/ansible-tmp-1709770710.8539224-187381-198300771974323/AnsiballZ_blockinfile.py && sleep 0'"'"''
+2024-03-07 01:18:31,078 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:18:31,078 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:31,079 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' -tt 127.0.0.1 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-xesexjzpdesqymouknvgmsdfvgbnunvk ; /usr/bin/python3 /home/vagrant/.ansible/tmp/ansible-tmp-1709770710.8539224-187381-198300771974323/AnsiballZ_blockinfile.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-03-07 01:18:31,109 p=187346 u=vissol n=ansible | Escalation succeeded
+2024-03-07 01:18:31,313 p=187346 u=vissol n=ansible | <127.0.0.1> (1, b'\r\n{"rc": 257, "failed": true, "msg": "Path /home/vagrant/.bash_aliases does not exist !", "invocation": {"module_args": {"path": "/home/vagrant/.bash_aliases", "block": "cat<<\'EOF\'\\n\\n  Terminal Welcome --> MSG: .bash_aliases creation and modification\\n\\nEOF\\n", "state": "present", "marker": "# {mark} ANSIBLE MANAGED BLOCK", "create": false, "backup": false, "marker_begin": "BEGIN", "marker_end": "END", "unsafe_writes": false, "insertafter": null, "insertbefore": null, "validate": null, "mode": null, "owner": null, "group": null, "seuser": null, "serole": null, "selevel": null, "setype": null, "attributes": null}}}\r\n', b'Shared connection to 127.0.0.1 closed.\r\n')
+2024-03-07 01:18:31,314 p=187346 u=vissol n=ansible | <127.0.0.1> Failed to connect to the host via ssh: Shared connection to 127.0.0.1 closed.
+2024-03-07 01:18:31,314 p=187346 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:18:31,314 p=187346 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1709770710.8539224-187381-198300771974323/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-03-07 01:18:31,332 p=187346 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:18:31,334 p=187346 u=vissol n=ansible | TASK [Add message to .bash_aliases file] *************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:18:31,334 p=187346 u=vissol n=ansible | fatal: [managed1]: FAILED! => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "attributes": null,
+            "backup": false,
+            "block": "cat<<'EOF'\n\n  Terminal Welcome --> MSG: .bash_aliases creation and modification\n\nEOF\n",
+            "create": false,
+            "group": null,
+            "insertafter": null,
+            "insertbefore": null,
+            "marker": "# {mark} ANSIBLE MANAGED BLOCK",
+            "marker_begin": "BEGIN",
+            "marker_end": "END",
+            "mode": null,
+            "owner": null,
+            "path": "/home/vagrant/.bash_aliases",
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "state": "present",
+            "unsafe_writes": false,
+            "validate": null
+        }
+    },
+    "rc": 257
+}
+
+MSG:
+
+Path /home/vagrant/.bash_aliases does not exist !
+
+2024-03-07 01:18:31,336 p=187346 u=vissol n=ansible | PLAY RECAP *******************************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:18:31,336 p=187346 u=vissol n=ansible | managed1                   : ok=3    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-03-07 01:20:17,030 p=187436 u=vissol n=ansible | ansible-playbook [core 2.15.6]
+  config file = /home/vissol/softs/dev-projects/debian-hard-ansible/ansible.cfg
+  configured module search path = ['/home/vissol/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vissol/.local/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/vissol/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.2 (default, Feb 28 2021, 17:03:44) [GCC 10.2.1 20210110] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+2024-03-07 01:20:17,030 p=187436 u=vissol n=ansible | Using /home/vissol/softs/dev-projects/debian-hard-ansible/ansible.cfg as config file
+2024-03-07 01:20:17,229 p=187436 u=vissol n=ansible | host_list declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini as it did not pass its verify_file() method
+2024-03-07 01:20:17,229 p=187436 u=vissol n=ansible | script declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini as it did not pass its verify_file() method
+2024-03-07 01:20:17,229 p=187436 u=vissol n=ansible | auto declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini as it did not pass its verify_file() method
+2024-03-07 01:20:17,229 p=187436 u=vissol n=ansible | yaml declined parsing /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini as it did not pass its verify_file() method
+2024-03-07 01:20:17,231 p=187436 u=vissol n=ansible | Parsed /home/vissol/softs/dev-projects/debian-hard-ansible/inventory/ansible.ini inventory source with ini plugin
+2024-03-07 01:20:17,408 p=187436 u=vissol n=ansible | redirecting (type: callback) ansible.builtin.debug to ansible.posix.debug
+2024-03-07 01:20:17,410 p=187436 u=vissol n=ansible | redirecting (type: callback) ansible.builtin.debug to ansible.posix.debug
+2024-03-07 01:20:17,432 p=187436 u=vissol n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-03-07 01:20:17,432 p=187436 u=vissol n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-03-07 01:20:17,432 p=187436 u=vissol n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-03-07 01:20:17,433 p=187436 u=vissol n=ansible | PLAYBOOK: Bash_aliases.yml ***************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:20:17,433 p=187436 u=vissol n=ansible | 1 plays in Bash_aliases.yml
+2024-03-07 01:20:17,434 p=187436 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:20:17,435 p=187436 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:20:17,437 p=187436 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:20:17,439 p=187436 u=vissol n=ansible | PLAY [all] *******************************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:20:17,456 p=187436 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:20:17,477 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:17,478 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''
+2024-03-07 01:20:17,619 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'/home/vagrant\n', b'')
+2024-03-07 01:20:17,619 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:17,620 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/vagrant/.ansible/tmp `"&& mkdir "` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770817.61831-187440-186732299512455 `" && echo ansible-tmp-1709770817.61831-187440-186732299512455="` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770817.61831-187440-186732299512455 `" ) && sleep 0'"'"''
+2024-03-07 01:20:17,641 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'ansible-tmp-1709770817.61831-187440-186732299512455=/home/vagrant/.ansible/tmp/ansible-tmp-1709770817.61831-187440-186732299512455\n', b'')
+2024-03-07 01:20:17,931 p=187436 u=vissol n=ansible | Using module file /home/vissol/.local/lib/python3.9/site-packages/ansible/modules/setup.py
+2024-03-07 01:20:17,931 p=187436 u=vissol n=ansible | <127.0.0.1> PUT /home/vissol/.ansible/tmp/ansible-local-187436e5l5_y_5/tmp1o7ft84h TO /home/vagrant/.ansible/tmp/ansible-tmp-1709770817.61831-187440-186732299512455/AnsiballZ_setup.py
+2024-03-07 01:20:17,932 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' '[127.0.0.1]'
+2024-03-07 01:20:17,981 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'sftp> put /home/vissol/.ansible/tmp/ansible-local-187436e5l5_y_5/tmp1o7ft84h /home/vagrant/.ansible/tmp/ansible-tmp-1709770817.61831-187440-186732299512455/AnsiballZ_setup.py\n', b'')
+2024-03-07 01:20:17,982 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:17,983 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1709770817.61831-187440-186732299512455/ /home/vagrant/.ansible/tmp/ansible-tmp-1709770817.61831-187440-186732299512455/AnsiballZ_setup.py && sleep 0'"'"''
+2024-03-07 01:20:17,999 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:20:17,999 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:17,999 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' -tt 127.0.0.1 '/bin/sh -c '"'"'/usr/bin/python3 /home/vagrant/.ansible/tmp/ansible-tmp-1709770817.61831-187440-186732299512455/AnsiballZ_setup.py && sleep 0'"'"''
+2024-03-07 01:20:18,913 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'\r\n{"ansible_facts": {"ansible_is_chroot": false, "ansible_loadavg": {"1m": 0.01, "5m": 0.01, "15m": 0.0}, "ansible_user_id": "vagrant", "ansible_user_uid": 1000, "ansible_user_gid": 1000, "ansible_user_gecos": "", "ansible_user_dir": "/home/vagrant", "ansible_user_shell": "/bin/bash", "ansible_real_user_id": 1000, "ansible_effective_user_id": 1000, "ansible_real_group_id": 1000, "ansible_effective_group_id": 1000, "ansible_system": "Linux", "ansible_kernel": "5.10.0-22-amd64", "ansible_kernel_version": "#1 SMP Debian 5.10.178-3 (2023-04-22)", "ansible_machine": "x86_64", "ansible_python_version": "3.9.2", "ansible_fqdn": "bullseye", "ansible_hostname": "bullseye", "ansible_nodename": "bullseye", "ansible_domain": "", "ansible_userspace_bits": "64", "ansible_architecture": "x86_64", "ansible_userspace_architecture": "x86_64", "ansible_machine_id": "27f15f113f5b459b85abdd642db15328", "ansible_env": {"USER": "vagrant", "SSH_CLIENT": "10.0.2.2 42690 22", "XDG_SESSION_TYPE": "tty", "SHLVL": "0", "MOTD_SHOWN": "pam", "HOME": "/home/vagrant", "SSH_TTY": "/dev/pts/0", "LOGNAME": "vagrant", "_": "/bin/sh", "XDG_SESSION_CLASS": "user", "TERM": "xterm-256color", "XDG_SESSION_ID": "9", "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/games", "XDG_RUNTIME_DIR": "/run/user/1000", "LANG": "C.UTF-8", "SHELL": "/bin/bash", "PWD": "/home/vagrant", "SSH_CONNECTION": "10.0.2.2 42690 10.0.2.15 22"}, "ansible_distribution": "Debian", "ansible_distribution_release": "bullseye", "ansible_distribution_version": "11.7", "ansible_distribution_major_version": "11", "ansible_distribution_file_path": "/etc/os-release", "ansible_distribution_file_variety": "Debian", "ansible_distribution_file_parsed": true, "ansible_distribution_minor_version": "7", "ansible_os_family": "Debian", "ansible_virtualization_role": "guest", "ansible_virtualization_type": "virtualbox", "ansible_virtualization_tech_guest": ["virtualbox"], "ansible_virtualization_tech_host": [], "ansible_system_capabilities_enforced": "True", "ansible_system_capabilities": [""], "ansible_fips": false, "ansible_lsb": {"id": "Debian", "description": "Debian GNU/Linux 11 (bullseye)", "release": "11", "codename": "bullseye", "major_release": "11"}, "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCw5Ja3fyxj+lIp9QlzicdiHf6DqwPcvCuZYMDPlAC18QKqtSHBR5Z6wuW4xja7M/4oGSpwHsHjTeWmQ8WwVmz6Y9vXF0vlSbIhdwOgh6M9GsnShgdCGnC0pQKNmZdEXF2u/1O+XKKgch+geNH7w2/gryVwuArfk30wMyj/TEga62kROs6S92W8tttmEWJ8L4eZt3tDSc1lq1yR1SB7jQe7yu1TZD4tU+LhkBuQ5MJeMn6eVyFF8t/QHijIP3MWGhzJj/WWp8GymGdqoATjusJY0CumNzzRWVgQ06qRDO6N2S+WmyaT0PPcIYCw5MfQnYHXvtw6aahOzeQgx/MnngfLQFx3TtrZq/Vk7xD2FtvbZ4mghizEp4OiVlSdhq79WeOOSQmtq+Yw+7mwc2yW6nIV5oICw3tE+gEAQFCAiqxDJZGdkeuySxaBHzpn3728HVopjShBp+gNRv8ajgUPNuz/vUWmuvklee3VepGK6dkiiLen53owHlmxnq8dJNHIMzs=", "ansible_ssh_host_key_rsa_public_keytype": "ssh-rsa", "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIP+Eq8R0hjnNzje83VT5wEExkWU1G3ZQmp/6mMutJJhskXYPDnJtcMoEwJg+uT4LCHQ/iI8Qzhi9Ys11bAS3L0=", "ansible_ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256", "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIKpy+jNzja+hGGVLgl6pToZ/I5rFaizrii5tp5J5XnIg", "ansible_ssh_host_key_ed25519_public_keytype": "ssh-ed25519", "ansible_fibre_channel_wwn": [], "ansible_local": {}, "ansible_dns": {"domain": "home", "search": ["home"], "nameservers": ["192.168.1.1"]}, "ansible_date_time": {"year": "2024", "month": "03", "weekday": "Thursday", "weekday_number": "4", "weeknumber": "10", "day": "07", "hour": "00", "minute": "20", "second": "18", "epoch": "1709770818", "epoch_int": "1709770818", "date": "2024-03-07", "time": "00:20:18", "iso8601_micro": "2024-03-07T00:20:18.566880Z", "iso8601": "2024-03-07T00:20:18Z", "iso8601_basic": "20240307T002018566880", "iso8601_basic_short": "20240307T002018", "tz": "UTC", "tz_dst": "UTC", "tz_offset": "+0000"}, "ansible_iscsi_iqn": "", "ansible_cmdline": {"BOOT_IMAGE": "/boot/vmlinuz-5.10.0-22-amd64", "root": "UUID=c62a50a0-9eed-4d76-86ad-b53c695efb0d", "ro": true, "consoleblank": "0", "elevator": "noop", "scsi_mod.use_blk_mq": "Y", "net.ifnames": "0", "biosdevname": "0"}, "ansible_proc_cmdline": {"BOOT_IMAGE": "/boot/vmlinuz-5.10.0-22-amd64", "root": "UUID=c62a50a0-9eed-4d76-86ad-b53c695efb0d", "ro": true, "consoleblank": "0", "elevator": "noop", "scsi_mod.use_blk_mq": "Y", "net.ifnames": "0", "biosdevname": "0"}, "ansible_python": {"version": {"major": 3, "minor": 9, "micro": 2, "releaselevel": "final", "serial": 0}, "version_info": [3, 9, 2, "final", 0], "executable": "/usr/bin/python3", "has_sslcontext": true, "type": "cpython"}, "ansible_selinux_python_present": true, "ansible_selinux": {"status": "disabled"}, "ansible_hostnqn": "", "ansible_pkg_mgr": "apt", "ansible_apparmor": {"status": "enabled"}, "ansible_processor": ["0", "GenuineIntel", "Intel(R) Core(TM) i7-6820HQ CPU @ 2.70GHz"], "ansible_processor_count": 1, "ansible_processor_cores": 1, "ansible_processor_threads_per_core": 1, "ansible_processor_vcpus": 1, "ansible_processor_nproc": 1, "ansible_memtotal_mb": 1971, "ansible_memfree_mb": 347, "ansible_swaptotal_mb": 0, "ansible_swapfree_mb": 0, "ansible_memory_mb": {"real": {"total": 1971, "used": 1624, "free": 347}, "nocache": {"free": 1738, "used": 233}, "swap": {"total": 0, "free": 0, "used": 0, "cached": 0}}, "ansible_bios_date": "12/01/2006", "ansible_bios_vendor": "innotek GmbH", "ansible_bios_version": "VirtualBox", "ansible_board_asset_tag": "NA", "ansible_board_name": "VirtualBox", "ansible_board_serial": "NA", "ansible_board_vendor": "Oracle Corporation", "ansible_board_version": "1.2", "ansible_chassis_asset_tag": "NA", "ansible_chassis_serial": "NA", "ansible_chassis_vendor": "Oracle Corporation", "ansible_chassis_version": "NA", "ansible_form_factor": "Other", "ansible_product_name": "VirtualBox", "ansible_product_serial": "NA", "ansible_product_uuid": "NA", "ansible_product_version": "1.2", "ansible_system_vendor": "innotek GmbH", "ansible_devices": {"sda": {"virtual": 1, "links": {"ids": ["ata-VBOX_HARDDISK_VB476501fb-c4ae7f1e"], "uuids": [], "labels": [], "masters": []}, "vendor": "ATA", "model": "VBOX HARDDISK", "sas_address": null, "sas_device_handle": null, "removable": "0", "support_discard": "0", "partitions": {"sda1": {"links": {"ids": ["ata-VBOX_HARDDISK_VB476501fb-c4ae7f1e-part1"], "uuids": ["c62a50a0-9eed-4d76-86ad-b53c695efb0d"], "labels": [], "masters": []}, "start": "2048", "sectors": "41940992", "sectorsize": 512, "size": "20.00 GB", "uuid": "c62a50a0-9eed-4d76-86ad-b53c695efb0d", "holders": []}}, "rotational": "1", "scheduler_mode": "mq-deadline", "sectors": "41943040", "sectorsize": "512", "size": "20.00 GB", "host": "SATA controller: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode] (rev 02)", "holders": []}}, "ansible_device_links": {"ids": {"sda1": ["ata-VBOX_HARDDISK_VB476501fb-c4ae7f1e-part1"], "sda": ["ata-VBOX_HARDDISK_VB476501fb-c4ae7f1e"]}, "uuids": {"sda1": ["c62a50a0-9eed-4d76-86ad-b53c695efb0d"]}, "labels": {}, "masters": {}}, "ansible_uptime_seconds": 6998, "ansible_lvm": "N/A", "ansible_mounts": [{"mount": "/", "device": "/dev/sda1", "fstype": "ext4", "options": "rw,relatime,discard,errors=remount-ro", "size_total": 20956397568, "size_available": 17703600128, "block_size": 4096, "block_total": 5116308, "block_available": 4322168, "block_used": 794140, "inode_total": 1310720, "inode_available": 1234484, "inode_used": 76236, "uuid": "c62a50a0-9eed-4d76-86ad-b53c695efb0d"}], "ansible_interfaces": ["eth0", "eth1", "lo"], "ansible_lo": {"device": "lo", "mtu": 65536, "active": true, "type": "loopback", "promisc": false, "ipv4": {"address": "127.0.0.1", "broadcast": "", "netmask": "255.0.0.0", "network": "127.0.0.0", "prefix": "8"}, "ipv6": [{"address": "::1", "prefix": "128", "scope": "host"}]}, "ansible_eth0": {"device": "eth0", "macaddress": "08:00:27:8d:c0:4d", "mtu": 1500, "active": true, "module": "e1000", "type": "ether", "pciid": "0000:00:03.0", "speed": 1000, "promisc": false, "ipv4": {"address": "10.0.2.15", "broadcast": "10.0.2.255", "netmask": "255.255.255.0", "network": "10.0.2.0", "prefix": "24"}, "ipv6": [{"address": "fe80::a00:27ff:fe8d:c04d", "prefix": "64", "scope": "link"}]}, "ansible_eth1": {"device": "eth1", "macaddress": "08:00:27:27:1b:59", "mtu": 1500, "active": true, "module": "e1000", "type": "ether", "pciid": "0000:00:08.0", "speed": 1000, "promisc": false, "ipv4": {"address": "192.168.1.57", "broadcast": "192.168.1.255", "netmask": "255.255.255.0", "network": "192.168.1.0", "prefix": "24"}, "ipv6": [{"address": "2a01:cb19:f93:9a00:a00:27ff:fe27:1b59", "prefix": "64", "scope": "global"}, {"address": "fe80::a00:27ff:fe27:1b59", "prefix": "64", "scope": "link"}]}, "ansible_default_ipv4": {"gateway": "10.0.2.2", "interface": "eth0", "address": "10.0.2.15", "broadcast": "10.0.2.255", "netmask": "255.255.255.0", "network": "10.0.2.0", "prefix": "24", "macaddress": "08:00:27:8d:c0:4d", "mtu": 1500, "type": "ether", "alias": "eth0"}, "ansible_default_ipv6": {"gateway": "fe80::3e98:72ff:fee2:5cbe", "interface": "eth1", "address": "2a01:cb19:f93:9a00:a00:27ff:fe27:1b59", "prefix": "64", "scope": "global", "macaddress": "08:00:27:27:1b:59", "mtu": 1500, "type": "ether"}, "ansible_all_ipv4_addresses": ["10.0.2.15", "192.168.1.57"], "ansible_all_ipv6_addresses": ["fe80::a00:27ff:fe8d:c04d", "2a01:cb19:f93:9a00:a00:27ff:fe27:1b59", "fe80::a00:27ff:fe27:1b59"], "ansible_locally_reachable_ips": {"ipv4": ["10.0.2.15", "127.0.0.0/8", "127.0.0.1", "192.168.1.57"], "ipv6": ["::1", "2a01:cb19:f93:9a00:a00:27ff:fe27:1b59", "fe80::a00:27ff:fe27:1b59", "fe80::a00:27ff:fe8d:c04d"]}, "ansible_service_mgr": "systemd", "gather_subset": ["all"], "module_setup": true}, "invocation": {"module_args": {"gather_subset": ["all"], "gather_timeout": 10, "filter": [], "fact_path": "/etc/ansible/facts.d"}}}\r\n', b'Shared connection to 127.0.0.1 closed.\r\n')
+2024-03-07 01:20:18,914 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:18,914 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1709770817.61831-187440-186732299512455/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-03-07 01:20:18,932 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:20:18,942 p=187436 u=vissol n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:20:18,943 p=187436 u=vissol n=ansible | ok: [managed1]
+2024-03-07 01:20:18,952 p=187436 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:20:18,959 p=187436 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:20:18,965 p=187436 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:20:18,982 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:18,983 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''
+2024-03-07 01:20:19,000 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'/home/vagrant\n', b'')
+2024-03-07 01:20:19,001 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:19,001 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/vagrant/.ansible/tmp `"&& mkdir "` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770818.9998946-187453-254810381596449 `" && echo ansible-tmp-1709770818.9998946-187453-254810381596449="` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770818.9998946-187453-254810381596449 `" ) && sleep 0'"'"''
+2024-03-07 01:20:19,025 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'ansible-tmp-1709770818.9998946-187453-254810381596449=/home/vagrant/.ansible/tmp/ansible-tmp-1709770818.9998946-187453-254810381596449\n', b'')
+2024-03-07 01:20:19,228 p=187436 u=vissol n=ansible | Using module file /home/vissol/.local/lib/python3.9/site-packages/ansible/modules/apt.py
+2024-03-07 01:20:19,229 p=187436 u=vissol n=ansible | <127.0.0.1> PUT /home/vissol/.ansible/tmp/ansible-local-187436e5l5_y_5/tmpl5ikx0af TO /home/vagrant/.ansible/tmp/ansible-tmp-1709770818.9998946-187453-254810381596449/AnsiballZ_apt.py
+2024-03-07 01:20:19,230 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' '[127.0.0.1]'
+2024-03-07 01:20:19,276 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'sftp> put /home/vissol/.ansible/tmp/ansible-local-187436e5l5_y_5/tmpl5ikx0af /home/vagrant/.ansible/tmp/ansible-tmp-1709770818.9998946-187453-254810381596449/AnsiballZ_apt.py\n', b'')
+2024-03-07 01:20:19,277 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:19,278 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1709770818.9998946-187453-254810381596449/ /home/vagrant/.ansible/tmp/ansible-tmp-1709770818.9998946-187453-254810381596449/AnsiballZ_apt.py && sleep 0'"'"''
+2024-03-07 01:20:19,295 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:20:19,295 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:19,296 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' -tt 127.0.0.1 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-axqutwxoydusrqgvbhpgrdpnplzgmqwi ; /usr/bin/python3 /home/vagrant/.ansible/tmp/ansible-tmp-1709770818.9998946-187453-254810381596449/AnsiballZ_apt.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-03-07 01:20:19,323 p=187436 u=vissol n=ansible | Escalation succeeded
+2024-03-07 01:20:23,380 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'\r\n\r\n{"changed": true, "stdout": "Reading package lists...\\nBuilding dependency tree...\\nReading state information...\\nThe following NEW packages will be installed:\\n  linuxlogo\\n0 upgraded, 1 newly installed, 0 to remove and 60 not upgraded.\\nNeed to get 84.7 kB of archives.\\nAfter this operation, 286 kB of additional disk space will be used.\\nGet:1 https://deb.debian.org/debian bullseye/main amd64 linuxlogo amd64 6.0-0.1 [84.7 kB]\\nFetched 84.7 kB in 1s (85.0 kB/s)\\nSelecting previously unselected package linuxlogo.\\r\\n(Reading database ... \\r(Reading database ... 5%\\r(Reading database ... 10%\\r(Reading database ... 15%\\r(Reading database ... 20%\\r(Reading database ... 25%\\r(Reading database ... 30%\\r(Reading database ... 35%\\r(Reading database ... 40%\\r(Reading database ... 45%\\r(Reading database ... 50%\\r(Reading database ... 55%\\r(Reading database ... 60%\\r(Reading database ... 65%\\r(Reading database ... 70%\\r(Reading database ... 75%\\r(Reading database ... 80%\\r(Reading database ... 85%\\r(Reading database ... 90%\\r(Reading database ... 95%\\r(Reading database ... 100%\\r(Reading database ... 33818 files and directories currently installed.)\\r\\nPreparing to unpack .../linuxlogo_6.0-0.1_amd64.deb ...\\r\\nUnpacking linuxlogo (6.0-0.1) ...\\r\\nSetting up linuxlogo (6.0-0.1) ...\\r\\nProcessing triggers for man-db (2.9.4-2) ...\\r\\n", "stderr": "", "diff": {}, "cache_updated": false, "cache_update_time": 1709764356, "invocation": {"module_args": {"name": "linuxlogo", "state": "present", "package": ["linuxlogo"], "update_cache_retries": 5, "update_cache_retry_max_delay": 12, "cache_valid_time": 0, "purge": false, "force": false, "upgrade": null, "dpkg_options": "force-confdef,force-confold", "autoremove": false, "autoclean": false, "fail_on_autoremove": false, "only_upgrade": false, "force_apt_get": false, "clean": false, "allow_unauthenticated": false, "allow_downgrade": false, "allow_change_held_packages": false, "lock_timeout": 60, "update_cache": null, "deb": null, "default_release": null, "install_recommends": null, "policy_rc_d": null}}}\r\n', b'Shared connection to 127.0.0.1 closed.\r\n')
+2024-03-07 01:20:23,380 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:23,380 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1709770818.9998946-187453-254810381596449/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-03-07 01:20:23,398 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:20:23,399 p=187436 u=vissol n=ansible | TASK [Install linuxlogo package] *********************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:20:23,400 p=187436 u=vissol n=ansible | changed: [managed1] => {
+    "cache_update_time": 1709764356,
+    "cache_updated": false,
+    "changed": true,
+    "diff": {},
+    "invocation": {
+        "module_args": {
+            "allow_change_held_packages": false,
+            "allow_downgrade": false,
+            "allow_unauthenticated": false,
+            "autoclean": false,
+            "autoremove": false,
+            "cache_valid_time": 0,
+            "clean": false,
+            "deb": null,
+            "default_release": null,
+            "dpkg_options": "force-confdef,force-confold",
+            "fail_on_autoremove": false,
+            "force": false,
+            "force_apt_get": false,
+            "install_recommends": null,
+            "lock_timeout": 60,
+            "name": "linuxlogo",
+            "only_upgrade": false,
+            "package": [
+                "linuxlogo"
+            ],
+            "policy_rc_d": null,
+            "purge": false,
+            "state": "present",
+            "update_cache": null,
+            "update_cache_retries": 5,
+            "update_cache_retry_max_delay": 12,
+            "upgrade": null
+        }
+    }
+}
+
+STDOUT:
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  linuxlogo
+0 upgraded, 1 newly installed, 0 to remove and 60 not upgraded.
+Need to get 84.7 kB of archives.
+After this operation, 286 kB of additional disk space will be used.
+Get:1 https://deb.debian.org/debian bullseye/main amd64 linuxlogo amd64 6.0-0.1 [84.7 kB]
+Fetched 84.7 kB in 1s (85.0 kB/s)
+Selecting previously unselected package linuxlogo.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 33818 files and directories currently installed.)
+Preparing to unpack .../linuxlogo_6.0-0.1_amd64.deb ...
+Unpacking linuxlogo (6.0-0.1) ...
+Setting up linuxlogo (6.0-0.1) ...
+Processing triggers for man-db (2.9.4-2) ...
+
+
+2024-03-07 01:20:23,415 p=187436 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:20:23,436 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:23,437 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''
+2024-03-07 01:20:23,459 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'/home/vagrant\n', b'')
+2024-03-07 01:20:23,460 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:23,460 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/vagrant/.ansible/tmp `"&& mkdir "` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770823.4585197-187463-33827876605907 `" && echo ansible-tmp-1709770823.4585197-187463-33827876605907="` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770823.4585197-187463-33827876605907 `" ) && sleep 0'"'"''
+2024-03-07 01:20:23,490 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'ansible-tmp-1709770823.4585197-187463-33827876605907=/home/vagrant/.ansible/tmp/ansible-tmp-1709770823.4585197-187463-33827876605907\n', b'')
+2024-03-07 01:20:23,627 p=187436 u=vissol n=ansible | Using module file /home/vissol/.local/lib/python3.9/site-packages/ansible/modules/file.py
+2024-03-07 01:20:23,628 p=187436 u=vissol n=ansible | <127.0.0.1> PUT /home/vissol/.ansible/tmp/ansible-local-187436e5l5_y_5/tmpavk6wzv9 TO /home/vagrant/.ansible/tmp/ansible-tmp-1709770823.4585197-187463-33827876605907/AnsiballZ_file.py
+2024-03-07 01:20:23,628 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' '[127.0.0.1]'
+2024-03-07 01:20:23,666 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'sftp> put /home/vissol/.ansible/tmp/ansible-local-187436e5l5_y_5/tmpavk6wzv9 /home/vagrant/.ansible/tmp/ansible-tmp-1709770823.4585197-187463-33827876605907/AnsiballZ_file.py\n', b'')
+2024-03-07 01:20:23,667 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:23,668 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1709770823.4585197-187463-33827876605907/ /home/vagrant/.ansible/tmp/ansible-tmp-1709770823.4585197-187463-33827876605907/AnsiballZ_file.py && sleep 0'"'"''
+2024-03-07 01:20:23,689 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:20:23,690 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:23,690 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' -tt 127.0.0.1 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-nxfbpmfjgezonhshfrxjdcofvivdyjls ; /usr/bin/python3 /home/vagrant/.ansible/tmp/ansible-tmp-1709770823.4585197-187463-33827876605907/AnsiballZ_file.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-03-07 01:20:23,725 p=187436 u=vissol n=ansible | Escalation succeeded
+2024-03-07 01:20:23,941 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'\r\n{"dest": "/home/vagrant/.bash_aliases", "changed": true, "diff": {"before": {"path": "/home/vagrant/.bash_aliases", "state": "absent", "owner": 0, "group": 0, "mtime": 1709770823.921381, "atime": 1709770823.921381}, "after": {"path": "/home/vagrant/.bash_aliases", "state": "touch", "owner": 1000, "group": 1000, "mtime": 1709770823.9243836, "atime": 1709770823.9243836}}, "uid": 1000, "gid": 1000, "owner": "vagrant", "group": "vagrant", "mode": "0644", "state": "file", "size": 0, "invocation": {"module_args": {"path": "/home/vagrant/.bash_aliases", "state": "touch", "owner": "vagrant", "group": "vagrant", "recurse": false, "force": false, "follow": true, "modification_time_format": "%Y%m%d%H%M.%S", "access_time_format": "%Y%m%d%H%M.%S", "unsafe_writes": false, "_original_basename": null, "_diff_peek": null, "src": null, "modification_time": null, "access_time": null, "mode": null, "seuser": null, "serole": null, "selevel": null, "setype": null, "attributes": null}}}\r\n', b'Shared connection to 127.0.0.1 closed.\r\n')
+2024-03-07 01:20:23,942 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:23,942 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1709770823.4585197-187463-33827876605907/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-03-07 01:20:23,958 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:20:23,960 p=187436 u=vissol n=ansible | TASK [Create .bash_aliases file] *********************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:20:23,961 p=187436 u=vissol n=ansible | changed: [managed1] => {
+    "changed": true,
+    "dest": "/home/vagrant/.bash_aliases",
+    "diff": {
+        "after": {
+            "atime": 1709770823.9243836,
+            "group": 1000,
+            "mtime": 1709770823.9243836,
+            "owner": 1000,
+            "path": "/home/vagrant/.bash_aliases",
+            "state": "touch"
+        },
+        "before": {
+            "atime": 1709770823.921381,
+            "group": 0,
+            "mtime": 1709770823.921381,
+            "owner": 0,
+            "path": "/home/vagrant/.bash_aliases",
+            "state": "absent"
+        }
+    },
+    "gid": 1000,
+    "group": "vagrant",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": "vagrant",
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "vagrant",
+            "path": "/home/vagrant/.bash_aliases",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "touch",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0644",
+    "owner": "vagrant",
+    "size": 0,
+    "state": "file",
+    "uid": 1000
+}
+2024-03-07 01:20:23,967 p=187436 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:20:23,989 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:23,989 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''
+2024-03-07 01:20:24,005 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'/home/vagrant\n', b'')
+2024-03-07 01:20:24,005 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:24,008 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/vagrant/.ansible/tmp `"&& mkdir "` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770824.0036755-187473-19927879945116 `" && echo ansible-tmp-1709770824.0036755-187473-19927879945116="` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770824.0036755-187473-19927879945116 `" ) && sleep 0'"'"''
+2024-03-07 01:20:24,026 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'ansible-tmp-1709770824.0036755-187473-19927879945116=/home/vagrant/.ansible/tmp/ansible-tmp-1709770824.0036755-187473-19927879945116\n', b'')
+2024-03-07 01:20:24,169 p=187436 u=vissol n=ansible | Using module file /home/vissol/.local/lib/python3.9/site-packages/ansible/modules/blockinfile.py
+2024-03-07 01:20:24,170 p=187436 u=vissol n=ansible | <127.0.0.1> PUT /home/vissol/.ansible/tmp/ansible-local-187436e5l5_y_5/tmpwh8fmmgc TO /home/vagrant/.ansible/tmp/ansible-tmp-1709770824.0036755-187473-19927879945116/AnsiballZ_blockinfile.py
+2024-03-07 01:20:24,170 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' '[127.0.0.1]'
+2024-03-07 01:20:24,209 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'sftp> put /home/vissol/.ansible/tmp/ansible-local-187436e5l5_y_5/tmpwh8fmmgc /home/vagrant/.ansible/tmp/ansible-tmp-1709770824.0036755-187473-19927879945116/AnsiballZ_blockinfile.py\n', b'')
+2024-03-07 01:20:24,210 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:24,210 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1709770824.0036755-187473-19927879945116/ /home/vagrant/.ansible/tmp/ansible-tmp-1709770824.0036755-187473-19927879945116/AnsiballZ_blockinfile.py && sleep 0'"'"''
+2024-03-07 01:20:24,227 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:20:24,227 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:24,228 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' -tt 127.0.0.1 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-hyuuyuriqairgnrznnchnknsmnorpokc ; /usr/bin/python3 /home/vagrant/.ansible/tmp/ansible-tmp-1709770824.0036755-187473-19927879945116/AnsiballZ_blockinfile.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-03-07 01:20:24,258 p=187436 u=vissol n=ansible | Escalation succeeded
+2024-03-07 01:20:24,462 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'\r\n\r\n{"changed": true, "msg": "Block inserted", "diff": [{"before": "", "after": "", "before_header": "/home/vagrant/.bash_aliases (content)", "after_header": "/home/vagrant/.bash_aliases (content)"}, {"before_header": "/home/vagrant/.bash_aliases (file attributes)", "after_header": "/home/vagrant/.bash_aliases (file attributes)"}], "invocation": {"module_args": {"path": "/home/vagrant/.bash_aliases", "block": "cat<<\'EOF\'\\n\\n  Terminal Welcome --> MSG: .bash_aliases creation and modification\\n\\nEOF\\n", "state": "present", "marker": "# {mark} ANSIBLE MANAGED BLOCK", "create": false, "backup": false, "marker_begin": "BEGIN", "marker_end": "END", "unsafe_writes": false, "insertafter": null, "insertbefore": null, "validate": null, "mode": null, "owner": null, "group": null, "seuser": null, "serole": null, "selevel": null, "setype": null, "attributes": null}}}\r\n', b'Shared connection to 127.0.0.1 closed.\r\n')
+2024-03-07 01:20:24,462 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:24,463 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1709770824.0036755-187473-19927879945116/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-03-07 01:20:24,480 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:20:24,481 p=187436 u=vissol n=ansible | TASK [Add message to .bash_aliases file] *************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:20:24,482 p=187436 u=vissol n=ansible | changed: [managed1] => {
+    "changed": true,
+    "diff": [
+        {
+            "after": "",
+            "after_header": "/home/vagrant/.bash_aliases (content)",
+            "before": "",
+            "before_header": "/home/vagrant/.bash_aliases (content)"
+        },
+        {
+            "after_header": "/home/vagrant/.bash_aliases (file attributes)",
+            "before_header": "/home/vagrant/.bash_aliases (file attributes)"
+        }
+    ],
+    "invocation": {
+        "module_args": {
+            "attributes": null,
+            "backup": false,
+            "block": "cat<<'EOF'\n\n  Terminal Welcome --> MSG: .bash_aliases creation and modification\n\nEOF\n",
+            "create": false,
+            "group": null,
+            "insertafter": null,
+            "insertbefore": null,
+            "marker": "# {mark} ANSIBLE MANAGED BLOCK",
+            "marker_begin": "BEGIN",
+            "marker_end": "END",
+            "mode": null,
+            "owner": null,
+            "path": "/home/vagrant/.bash_aliases",
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "state": "present",
+            "unsafe_writes": false,
+            "validate": null
+        }
+    }
+}
+
+MSG:
+
+Block inserted
+
+2024-03-07 01:20:24,489 p=187436 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:20:24,509 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:24,510 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''
+2024-03-07 01:20:24,526 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'/home/vagrant\n', b'')
+2024-03-07 01:20:24,527 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:24,527 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/vagrant/.ansible/tmp `"&& mkdir "` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770824.5256803-187482-68593577012052 `" && echo ansible-tmp-1709770824.5256803-187482-68593577012052="` echo /home/vagrant/.ansible/tmp/ansible-tmp-1709770824.5256803-187482-68593577012052 `" ) && sleep 0'"'"''
+2024-03-07 01:20:24,551 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'ansible-tmp-1709770824.5256803-187482-68593577012052=/home/vagrant/.ansible/tmp/ansible-tmp-1709770824.5256803-187482-68593577012052\n', b'')
+2024-03-07 01:20:24,690 p=187436 u=vissol n=ansible | Using module file /home/vissol/.local/lib/python3.9/site-packages/ansible/modules/lineinfile.py
+2024-03-07 01:20:24,691 p=187436 u=vissol n=ansible | <127.0.0.1> PUT /home/vissol/.ansible/tmp/ansible-local-187436e5l5_y_5/tmp377xzg2a TO /home/vagrant/.ansible/tmp/ansible-tmp-1709770824.5256803-187482-68593577012052/AnsiballZ_lineinfile.py
+2024-03-07 01:20:24,691 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' '[127.0.0.1]'
+2024-03-07 01:20:24,728 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'sftp> put /home/vissol/.ansible/tmp/ansible-local-187436e5l5_y_5/tmp377xzg2a /home/vagrant/.ansible/tmp/ansible-tmp-1709770824.5256803-187482-68593577012052/AnsiballZ_lineinfile.py\n', b'')
+2024-03-07 01:20:24,729 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:24,730 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1709770824.5256803-187482-68593577012052/ /home/vagrant/.ansible/tmp/ansible-tmp-1709770824.5256803-187482-68593577012052/AnsiballZ_lineinfile.py && sleep 0'"'"''
+2024-03-07 01:20:24,747 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:20:24,747 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:24,748 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' -tt 127.0.0.1 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-pobkludnohnkdavaemdarazsuffcpmux ; /usr/bin/python3 /home/vagrant/.ansible/tmp/ansible-tmp-1709770824.5256803-187482-68593577012052/AnsiballZ_lineinfile.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-03-07 01:20:24,772 p=187436 u=vissol n=ansible | Escalation succeeded
+2024-03-07 01:20:24,982 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'\r\n{"changed": true, "msg": "line added", "backup": "", "diff": [{"before": "", "after": "", "before_header": "/home/vagrant/.bash_aliases (content)", "after_header": "/home/vagrant/.bash_aliases (content)"}, {"before_header": "/home/vagrant/.bash_aliases (file attributes)", "after_header": "/home/vagrant/.bash_aliases (file attributes)"}], "invocation": {"module_args": {"path": "/home/vagrant/.bash_aliases", "line": "linuxlogo", "state": "present", "backrefs": false, "create": false, "backup": false, "firstmatch": false, "unsafe_writes": false, "regexp": null, "search_string": null, "insertafter": null, "insertbefore": null, "validate": null, "mode": null, "owner": null, "group": null, "seuser": null, "serole": null, "selevel": null, "setype": null, "attributes": null}}}\r\n', b'Shared connection to 127.0.0.1 closed.\r\n')
+2024-03-07 01:20:24,983 p=187436 u=vissol n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-03-07 01:20:24,983 p=187436 u=vissol n=ansible | <127.0.0.1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=2222 -o 'IdentityFile="/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o 'ControlPath="/home/vissol/.ansible/cp/055b8f4af0"' 127.0.0.1 '/bin/sh -c '"'"'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1709770824.5256803-187482-68593577012052/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-03-07 01:20:25,000 p=187436 u=vissol n=ansible | <127.0.0.1> (0, b'', b'')
+2024-03-07 01:20:25,001 p=187436 u=vissol n=ansible | TASK [Add linuxlogo command to .bash_aliases file] ***************************************************************************************************************************************************************************************************************************
+2024-03-07 01:20:25,002 p=187436 u=vissol n=ansible | changed: [managed1] => {
+    "backup": "",
+    "changed": true,
+    "diff": [
+        {
+            "after": "",
+            "after_header": "/home/vagrant/.bash_aliases (content)",
+            "before": "",
+            "before_header": "/home/vagrant/.bash_aliases (content)"
+        },
+        {
+            "after_header": "/home/vagrant/.bash_aliases (file attributes)",
+            "before_header": "/home/vagrant/.bash_aliases (file attributes)"
+        }
+    ],
+    "invocation": {
+        "module_args": {
+            "attributes": null,
+            "backrefs": false,
+            "backup": false,
+            "create": false,
+            "firstmatch": false,
+            "group": null,
+            "insertafter": null,
+            "insertbefore": null,
+            "line": "linuxlogo",
+            "mode": null,
+            "owner": null,
+            "path": "/home/vagrant/.bash_aliases",
+            "regexp": null,
+            "search_string": null,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "state": "present",
+            "unsafe_writes": false,
+            "validate": null
+        }
+    }
+}
+
+MSG:
+
+line added
+
+2024-03-07 01:20:25,010 p=187436 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:20:25,020 p=187436 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:20:25,026 p=187436 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:20:25,031 p=187436 u=vissol n=ansible | Read vars_file 'vars.yml'
+2024-03-07 01:20:25,032 p=187436 u=vissol n=ansible | PLAY RECAP *******************************************************************************************************************************************************************************************************************************************************************
+2024-03-07 01:20:25,033 p=187436 u=vissol n=ansible | managed1                   : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-03-07 01:21:00,201 p=187609 u=vissol n=ansible | {
+    "_meta": {
+        "hostvars": {
+            "managed1": {
+                "ansible_host": "127.0.0.1",
+                "ansible_port": 2222,
+                "ansible_private_key_file": "/home/vissol/softs/Vagrant/debianhard/.vagrant/machines/default/virtualbox/private_key",
+                "ansible_user": "vagrant"
+            }
+        }
+    },
+    "all": {
+        "children": [
+            "ungrouped",
+            "node1"
+        ]
+    },
+    "node1": {
+        "hosts": [
+            "managed1"
+        ]
+    }
+}

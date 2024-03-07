@@ -1,0 +1,37 @@
+---
+# run the playbook: 'ansible-playbook Bash_aliases.yml -vvv'  
+# run the playbook at the same level than ansible.cfg
+- hosts: all
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: Install linuxlogo package
+      apt:
+        name: linuxlogo
+        state: present
+      become: yes
+  
+    - name: Create and modify .bash_aliases file
+      block:
+        - name: Create .bash_aliases file
+          file:
+            path: /home/{{ usernameroot }}/.bash_aliases
+            state: touch
+            owner: "{{ usernameroot }}"
+            group: "{{ usernameroot }}"
+
+        - name: Add message to .bash_aliases file
+          blockinfile:
+            path: /home/{{ usernameroot }}/.bash_aliases
+            block: |
+              cat<<'EOF'
+
+                {{ tmsg }}
+
+              EOF
+
+        - name: Add linuxlogo command to .bash_aliases file
+          lineinfile:
+            path: /home/{{ usernameroot }}/.bash_aliases
+            line: linuxlogo
+      become: yes
