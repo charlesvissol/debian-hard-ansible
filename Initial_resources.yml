@@ -1,0 +1,39 @@
+---
+# run the playbook: 'ansible-playbook Sudoers.yml -vvv'
+# run the playbook at the same level as ansible.cfg
+
+- name: Initial Update / Upgrade
+  hosts: all
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: Create destination directory
+      ansible.builtin.file:
+        path: /home/{{ usernameroot }}/Downloads
+        state: directory
+        mode: '0755'
+        
+    - name: Download MarkText editor DEB package
+      ansible.builtin.get_url:
+        url: https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-amd64.deb
+        dest: /home/{{ usernameroot }}/Downloads/marktext-amd64.deb
+    
+    - name: Download VirtualBox DEB package
+      ansible.builtin.get_url:
+        url: https://download.virtualbox.org/virtualbox/7.0.14/virtualbox-7.0_7.0.14-161095~Debian~bookworm_amd64.deb
+        dest: /home/{{ usernameroot }}/Downloads/virtualbox-7.0_7.0.14-161095~Debian~bookworm_amd64.deb
+
+    - name: Download VirtualBox Extension Pack
+      ansible.builtin.get_url:
+        url: https://download.virtualbox.org/virtualbox/7.0.14/Oracle_VM_VirtualBox_Extension_Pack-7.0.14.vbox-extpack
+        dest: /home/{{ usernameroot }}/Downloads/Oracle_VM_VirtualBox_Extension_Pack-7.0.14.vbox-extpack
+    
+    - name: Update packages list
+      apt:
+        update_cache: yes
+      become: yes
+    
+    - name: Upgrade packages
+      apt:
+        upgrade: yes
+      become: yes

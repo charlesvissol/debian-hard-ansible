@@ -1,1 +1,3 @@
 ansible.log
+inventory/ansible.ini
+ansible.cfg
