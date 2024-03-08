@@ -1,6 +1,8 @@
 ---
 # run the playbook: 'ansible-playbook Bash_aliases.yml -vvv'  
 # run the playbook at the same level than ansible.cfg
+# MIT License: https://mit-license.org/
+# The purpose of this playbook is to create a .bash_aliases to prompt with a linuxlogo.
 - hosts: all
   vars_files:
     - vars.yml

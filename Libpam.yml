@@ -1,6 +1,8 @@
 ---
 # run the playbook: 'ansible-playbook Bash_aliases.yml -vvv'  
 # run the playbook at the same level than ansible.cfg
+# MIT License: https://mit-license.org/
+# Add the PAM (Pluggable Authentication Modules) to the system
 - hosts: all
   vars_files:
     - vars.yml
