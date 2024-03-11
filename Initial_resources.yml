@@ -2,7 +2,7 @@
 # run the playbook: 'ansible-playbook Sudoers.yml -vvv'
 # run the playbook at the same level as ansible.cfg
 
-- name: Initial Update / Upgrade
+- name: Initial Resources
   hosts: all
   vars_files:
     - vars.yml

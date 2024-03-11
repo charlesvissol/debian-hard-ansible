@@ -1,0 +1,18 @@
+---
+# run the playbook: 'ansible-playbook Bash_aliases.yml -vvv'  
+# run the playbook at the same level than ansible.cfg
+# MIT License: https://mit-license.org/
+- name: Update / Upgrade
+  hosts: all
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: Update packages list
+      apt:
+        update_cache: yes
+      become: yes
+    
+    - name: Upgrade packages
+      apt:
+        upgrade: yes
+      become: yes

@@ -1,0 +1,26 @@
+---
+# run the playbook: 'ansible-playbook Bash_aliases.yml -vvv'  
+# run the playbook at the same level than ansible.cfg
+# MIT License: https://mit-license.org/
+- name: Install and configure Tor Network
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install Tor
+      apt:
+        name: tor
+        state: present
+        update_cache: yes
+    
+    - name: Configure /etc/tor/torrc (RunAsDaemon)
+      lineinfile:
+        path: /etc/tor/torrc
+        regexp: '^#*RunAsDaemon'
+        line: 'RunAsDaemon 1'
+      notify: Restart Tor
+      
+  handlers:
+    - name: Restart Tor
+      systemd:
+        name: tor
+        state: restarted
