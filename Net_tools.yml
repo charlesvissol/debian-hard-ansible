@@ -14,10 +14,6 @@
     - name: Verify net-tools installation
       command: apt search net-tools
       changed_when: false
-      
-    - name: Print net-tools search results
-      debug:
-        var: net_tools_search.stdout_lines
         
     - name: Check open ports
       command: netstat -tap | grep LISTEN
