@@ -1,5 +1,5 @@
 ---
-# run the playbook: 'ansible-playbook Bash_aliases.yml -vvv'  
+# run the playbook: 'ansible-playbook Tor_network.yml -vvv'  
 # run the playbook at the same level than ansible.cfg
 # MIT License: https://mit-license.org/
 - name: Install and configure Tor Network

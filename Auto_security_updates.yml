@@ -1,0 +1,15 @@
+---
+# run the playbook: 'ansible-playbook Auto_security_updates.yml -vvv'
+# run the playbook at the same level than ansible.cfg
+# MIT License: https://mit-license.org/
+- name: Auto Security Updates
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install unattended-upgrades
+      apt:
+        name: unattended-upgrades
+        state: present
+      
+    - name: Configure unattended-upgrades
+      command: dpkg-reconfigure --priority=low unattended-upgrades

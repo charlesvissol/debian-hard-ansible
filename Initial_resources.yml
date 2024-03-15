@@ -1,7 +1,7 @@
 ---
-# run the playbook: 'ansible-playbook Sudoers.yml -vvv'
+# run the playbook: 'ansible-playbook Initial_resources.yml -vvv'
 # run the playbook at the same level as ansible.cfg
-
+# MIT License: https://mit-license.org/
 - name: Initial Resources
   hosts: all
   vars_files:

@@ -1,0 +1,36 @@
+---
+# run the playbook: 'ansible-playbook Aide.yml -vvv'
+# run the playbook at the same level than ansible.cfg
+# MIT License: https://mit-license.org/
+- hosts: all
+  become: yes
+  tasks:
+    - name: install AIDE
+      apt:
+        name: aide
+        state: present
+    
+    - name: Add exclusion for user files and Ansible temporary files
+      blockinfile:
+        path: /etc/aide/aide.conf
+        block: |
+          !/run/user/.*
+    
+    - name: Verify the configuration
+      command: aide -c /etc/aide/aide.conf --config-check
+      register: config_check_output
+      changed_when: false
+      failed_when: config_check_output.rc != 0
+      
+    - name: Initialize the database
+      command: aideinit -y -f
+      register: database_init_output
+      changed_when: false
+      failed_when: database_init_output.rc != 0
+    
+    - name: Update the configuration
+      become: yes
+      command: aide -c /etc/aide/aide.conf --update
+      register: config_update_output
+      changed_when: false
+      failed_when: config_update_output.rc != 0

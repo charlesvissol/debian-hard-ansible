@@ -1,0 +1,21 @@
+---
+# run the playbook: 'ansible-playbook Get_system_infos.yml -vvv'
+# run the playbook at the same level than ansible.cfg
+# MIT License: https://mit-license.org/
+- name: Get System Information
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install lshw utility
+      apt:
+        name: lshw
+        state: present
+        
+    - name: Execute hostnamectl
+      command: hostnamectl
+    
+    - name: Execute lscpu
+      command: lscpu
+      
+    - name: Execute lshw
+      command: lshw

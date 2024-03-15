@@ -1,0 +1,15 @@
+---
+# run the playbook: 'ansible-playbook Clean_package_cache.yml -vvv'
+# run the playbook at the same level than ansible.cfg
+# MIT License: https://mit-license.org/
+- name: Clean Package Cache
+  hosts: all
+  become: yes
+  tasks:
+    - name: Autoremove packages
+      apt:
+        autoremove: yes
+    
+    - name: Clean package cache
+      apt:
+        autoclean: yes

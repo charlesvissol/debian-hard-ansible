@@ -1,0 +1,33 @@
+---
+# run the playbook: 'ansible-playbook Clean_package_cache.yml -vvv'
+# run the playbook at the same level than ansible.cfg
+# MIT License: https://mit-license.org/
+- name: Configure Partitions
+  hosts: all
+  become: yes
+  tasks:
+    - name: Backup /etc/fstab to current directory
+      copy:
+        src: /etc/fstab
+        dest: ./fstab.save
+      
+    - name: Update /etc/fstab for /home partition
+      command: >
+        sed -i '/\/home[[:space:]]/ s/defaults/nodev/' /etc/fstab
+
+    - name: Update /etc/fstab for /tmp partition
+      command: >
+        sed -i '/\/tmp[[:space:]]/ s/defaults/nosuid,nodev,noexec/' /etc/fstab
+
+    - name: Update /etc/fstab for /var partition
+      command: >
+        sed -i '/\/var[[:space:]]/ s/defaults/nosuid,nodev/' /etc/fstab
+
+    - name: Add tmpfs entry to /etc/fstab
+      lineinfile:
+        path: /etc/fstab
+        line: "tmpfs /dev/shm tmpfs rw,noexec,nosuid,nodev 0 0"
+        insertafter: EOF
+
+    - name: Display /etc/fstab content
+      command: cat /etc/fstab

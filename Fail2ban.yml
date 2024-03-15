@@ -1,0 +1,32 @@
+---
+# run the playbook: 'ansible-playbook Fail2ban.yml -vvv'
+# run the playbook at the same level than ansible.cfg
+# MIT License: https://mit-license.org/
+- name: Install Fail2ban intrusion detection
+  hosts: all
+  become: yes
+  tasks:
+    - name: INstall fail2ban package
+      apt:
+        name: fail2ban
+        state: present
+      
+    - name: Copy fail2ban configuration file
+      copy:
+        src: /etc/fail2ban/jail.conf
+        dest: /etc/fail2ban/jail.local
+    
+    - name: Adjust bantime and findtime in fail2ban configuration
+      replace:
+        path: /etc/fail2ban/jail.local
+        regexp: "{{ item.regexp }}"
+        replace: "{{ item.replace }}"
+      loop:
+        - { regexp: 'bantime\s*=\s*600', replace: 'bantime = 3600' }
+        - { regexp: 'findtime\s*=\s*600', replace: 'findtime = 3600' }
+        
+    - name: Restart fail2ban service
+      systemd:
+        name: fail2ban
+        state: restarted
+      
