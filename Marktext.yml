@@ -1,0 +1,20 @@
+---
+# run the playbook: 'ansible-playbook Marktext.yml -vvv'
+# run the playbook at the same level as ansible.cfg
+# MIT License: https://mit-license.org/
+- name: Install Marktext
+  hosts: all
+  tasks:
+    - name: Install Stacer package
+      apt:
+        deb: /home/{{ usernameroot }}/Downloads/marktext-amd64.deb
+      become: yes
+    
+    - name: Copy Marktext desktop file
+      copy:
+        src: marktext.desktop.j2
+        dest: "/home/{{ usernameroot }}/Desktop/marktext.desktop"
+        owner: "{{ usernameroot }}"
+        group: "{{ usernameroot }}"
+        mode: '0755'
+      become: yes

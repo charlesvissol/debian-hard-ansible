@@ -4,8 +4,8 @@
 # MIT License: https://mit-license.org/
 # Add the PAM (Pluggable Authentication Modules) to the system
 - hosts: all
-  vars_files:
-    - vars.yml
+#  vars_files:
+#    - vars.yml
   tasks:
     - name: Install libpam-pwquality package
       apt:

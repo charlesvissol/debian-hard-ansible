@@ -1,0 +1,21 @@
+---
+# run the playbook: 'ansible-playbook Stacer.yml -vvv'
+# run the playbook at the same level as ansible.cfg
+# MIT License: https://mit-license.org/
+- name: Install Stacer
+  hosts: all
+  tasks:
+    - name: Install Stacer package
+      apt:
+        name: stacer
+        state: present
+      become: yes
+    
+    - name: Copy Stacer desktop file
+      copy:
+        src: stacer.desktop.j2
+        dest: "/home/{{ usernameroot }}/Desktop/stacer.desktop"
+        owner: "{{ usernameroot }}"
+        group: "{{ usernameroot }}"
+        mode: '0755'
+      become: yes

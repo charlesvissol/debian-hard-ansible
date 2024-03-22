@@ -1,0 +1,56 @@
+---
+# run the playbook: 'ansible-playbook Docker.yml -vvv'
+# run the playbook at the same level as ansible.cfg
+# MIT License: https://mit-license.org/
+- name: Install Docker
+  hosts: all
+  become: yes
+  tasks:
+    - name: Remove existing Docker source file
+      file:
+        path: /etc/apt/sources.list.d/docker.list
+        state: absent
+
+    - name: Remove existing Docker GPG key
+      shell: rm /etc/apt/keyrings/docker.gpg
+
+    - name: Clear APT cache
+      apt:
+        cache_valid_time: 0
+        update_cache: yes
+
+    - name: Create keyring directory
+      file:
+        path: /etc/apt/keyrings
+        state: directory
+        mode: '0755'
+
+    - name: Add Docker GPG key
+      shell: curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+      args:
+        creates: /etc/apt/keyrings/docker.gpg
+
+    - name: Create Docker repository file
+      file:
+        path: /etc/apt/sources.list.d/docker.list
+        state: touch
+
+    - name: Add Docker repository
+      blockinfile:
+        path: /etc/apt/sources.list.d/docker.list
+        block: |
+          deb [arch={{ ansible_architecture }} signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian {{ ansible_lsb.codename }} stable
+
+    - name: Set permissions for Docker GPG key
+      file:
+        path: /etc/apt/keyrings/docker.gpg
+        mode: '0644'
+
+    - name: Update package repository
+      apt:
+        update_cache: yes
+
+    - name: Install Docker
+      apt:
+        name: ["docker-ce", "docker-ce-cli", "containerd.io", "docker-compose-plugin"]
+        state: present

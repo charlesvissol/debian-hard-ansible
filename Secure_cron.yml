@@ -1,0 +1,82 @@
+---
+# run the playbook: 'ansible-playbook Secure_cron.yml -vvv'
+# run the playbook at the same level than ansible.cfg
+# MIT License: https://mit-license.org/
+- name: Secure Cron
+  hosts: all
+  become: yes
+  tasks:
+    - name: Secure /etc/crontab
+      file:
+        path: /etc/crontab
+        owner: root
+        group: root
+        mode: '0600'
+
+    - name: Secure /etc/cron.hourly
+      file:
+        path: /etc/cron.hourly
+        owner: root
+        group: root
+        mode: '0700'
+        recurse: yes
+
+    - name: Secure /etc/cron.daily
+      file:
+        path: /etc/cron.daily
+        owner: root
+        group: root
+        mode: '0700'
+        recurse: yes
+
+    - name: Secure /etc/cron.weekly
+      file:
+        path: /etc/cron.weekly
+        owner: root
+        group: root
+        mode: '0700'
+        recurse: yes
+
+    - name: Secure /etc/cron.monthly
+      file:
+        path: /etc/cron.monthly
+        owner: root
+        group: root
+        mode: '0700'
+        recurse: yes
+
+    - name: Secure /etc/cron.d
+      file:
+        path: /etc/cron.d
+        owner: root
+        group: root
+        mode: '0700'
+        recurse: yes
+
+    - name: Restrict CRON access
+      file:
+        path: "{{ item }}"
+        state: touch
+        owner: root
+        group: root
+        mode: '0600'
+      with_items:
+        - /etc/cron.allow
+        - /etc/cron.deny
+
+    - name: Verify result
+      command: ls -l "{{ item }}"
+      register: ls_output
+      with_items:
+        - /etc/crontab
+        - /etc/cron.hourly
+        - /etc/cron.daily
+        - /etc/cron.weekly
+        - /etc/cron.monthly
+        - /etc/cron.d
+        - /etc/cron.allow
+        - /etc/cron.deny
+
+    - name: Print ls output
+      debug:
+        var: ls_output.stdout_lines

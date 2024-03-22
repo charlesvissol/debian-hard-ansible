@@ -1,0 +1,26 @@
+---
+# run the playbook: 'ansible-playbook Firejail.yml -vvv'  
+# run the playbook at the same level than ansible.cfg
+# MIT License: https://mit-license.org/
+- hosts: all
+#  vars_files:
+#    - vars.yml
+  tasks:      
+    - name: Install Firejail and AppArmor utils
+      apt:
+        name: ["firejail", "apparmor-utils"]
+        state: present
+      become: yes
+        
+    - name: Enforce firejail-default AppArmor profile
+      command: aa-enforce firejail-default
+      become: yes
+        
+#    - name: Copy Desktop shortcut to firejail
+#      copy:
+#        src: firejail-firefox-esr.desktop.j2
+#        dest: /home/{{ usernameroot }}/Desktop/firejail-firefox-esr.desktop
+#        owner: "{{ usernameroot }}"
+#        group: "{{ usernameroot }}"
+#        mode: '0755'
+#      become: yes

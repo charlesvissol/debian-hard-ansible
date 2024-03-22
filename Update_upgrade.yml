@@ -5,8 +5,8 @@
 # The purpose of this playbook is to update and upgrade the system to ensure it is up-to-date
 - name: Update / Upgrade
   hosts: all
-  vars_files:
-    - vars.yml
+#  vars_files:
+#    - vars.yml
   tasks:
     - name: Update packages list
       apt:

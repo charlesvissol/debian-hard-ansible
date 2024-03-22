@@ -1,0 +1,140 @@
+---
+# run the playbook: 'ansible-playbook Sysctl_conf.yml -vvv'  
+# run the playbook at the same level than ansible.cfg
+# MIT License: https://mit-license.org/
+- name: Configure sysctl
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install procps package
+      package:
+        name: procps
+        state: present
+
+    - name: Backup /etc/sysctl.conf
+      copy:
+        src: /etc/sysctl.conf
+        dest: /root/sysctl.conf.save
+        backup: yes
+
+    - name: Set net.ipv4.conf.default.rp_filter to 1
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv4.conf.default.rp_filter = 1'
+        create: yes
+
+    - name: Set net.ipv4.conf.all.rp_filter to 1
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv4.conf.all.rp_filter = 1'
+        create: yes
+
+    - name: Set net.ipv4.tcp_syncookies to 1
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv4.tcp_syncookies = 1'
+        create: yes
+
+    - name: Set net.ipv4.conf.all.accept_redirects to 0
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv4.conf.all.accept_redirects = 0'
+        create: yes
+
+    - name: Set net.ipv6.conf.all.accept_redirects to 0
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv6.conf.all.accept_redirects = 0'
+        create: yes
+
+    - name: Set net.ipv4.conf.all.send_redirects to 0
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv4.conf.all.send_redirects = 0'
+        create: yes
+
+    - name: Set net.ipv4.conf.all.log_martians to 1
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv4.conf.all.log_martians = 1'
+        create: yes
+
+    - name: Set net.ipv4.ip_forward to 0
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv4.ip_forward = 0'
+        create: yes
+
+    - name: Set net.ipv4.conf.all.secure_redirects to 0
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv4.conf.all.secure_redirects = 0'
+        create: yes
+
+    - name: Set net.ipv4.conf.all.accept_source_route to 0
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv4.conf.all.accept_source_route = 0'
+        create: yes
+
+    - name: Set net.ipv4.conf.default.accept_source_route to 0
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv4.conf.default.accept_source_route = 0'
+        create: yes
+
+    - name: Set net.ipv4.conf.all.accept_redirects to 0
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv4.conf.all.accept_redirects = 0'
+        create: yes
+
+    - name: Set net.ipv4.conf.default.accept_redirects to 0
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv4.conf.default.accept_redirects = 0'
+        create: yes
+
+    - name: Set net.ipv4.conf.all.secure_redirects to 0
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv4.conf.all.secure_redirects = 0'
+        create: yes
+
+    - name: Set net.ipv4.conf.default.secure_redirects to 0
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv4.conf.default.secure_redirects = 0'
+        create: yes
+
+    - name: Set net.ipv4.icmp_echo_ignore_broadcasts to 1
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv4.icmp_echo_ignore_broadcasts = 1'
+        create: yes
+
+    - name: Set net.ipv4.icmp_ignore_bogus_error_responses to 1
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv4.icmp_ignore_bogus_error_responses = 1'
+        create: yes
+
+    - name: Set net.ipv6.conf.all.accept_ra to 1
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv6.conf.all.accept_ra = 1'
+        create: yes
+
+    - name: Set net.ipv6.conf.default.accept_ra to 1
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.ipv6.conf.default.accept_ra = 1'
+        create: yes
+
+    - name: Display /etc/sysctl.conf modified
+      command: cat /etc/sysctl.conf
+      register: sysctl_output
+
+    - name: Print /etc/sysctl.conf modified
+      debug:
+        var: sysctl_output.stdout_lines
